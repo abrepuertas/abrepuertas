@@ -443,8 +443,8 @@ section h2 {
 
 .hero__veil {
   background:
-    linear-gradient(105deg, rgba(10, 31, 61, 0.92) 0%, rgba(10, 31, 61, 0.68) 48%, rgba(10, 31, 61, 0.32) 100%),
-    linear-gradient(180deg, rgba(10, 31, 61, 0.35) 0%, transparent 35%, rgba(10, 31, 61, 0.55) 100%);
+    linear-gradient(105deg, rgba(10, 31, 61, 0.86) 0%, rgba(10, 31, 61, 0.58) 50%, rgba(10, 31, 61, 0.28) 100%),
+    linear-gradient(180deg, rgba(10, 31, 61, 0.28) 0%, transparent 40%, rgba(10, 31, 61, 0.45) 100%);
   inset: 0;
   position: absolute;
   z-index: -1;
