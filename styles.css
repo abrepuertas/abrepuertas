@@ -427,7 +427,7 @@ section h2 {
   animation: hero-ken 18s ease-out forwards;
   height: 100%;
   object-fit: cover;
-  object-position: center 40%;
+  object-position: center 45%;
   transform: scale(1.04);
   width: 100%;
 }
