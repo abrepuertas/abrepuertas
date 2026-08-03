@@ -4,6 +4,10 @@
   const navOverlay = document.querySelector(".nav-overlay");
   const header = document.querySelector(".site-header");
   const yearTarget = document.getElementById("year");
+  const form = document.querySelector(".contact__form");
+  const feedback = form?.querySelector(".contact__feedback");
+  const successPanel = document.querySelector(".contact__success");
+  const contactPanel = document.querySelector(".contact__panel");
 
   const setMenu = (open) => {
     if (!menuButton || !siteNav) return;
@@ -20,11 +24,9 @@
     menuButton.addEventListener("click", () => {
       setMenu(!siteNav.classList.contains("is-open"));
     });
-
     siteNav.addEventListener("click", (event) => {
       if (event.target instanceof HTMLAnchorElement) setMenu(false);
     });
-
     document.addEventListener("keydown", (event) => {
       if (event.key === "Escape" && siteNav.classList.contains("is-open")) {
         setMenu(false);
@@ -33,9 +35,7 @@
     });
   }
 
-  if (navOverlay) {
-    navOverlay.addEventListener("click", () => setMenu(false));
-  }
+  if (navOverlay) navOverlay.addEventListener("click", () => setMenu(false));
 
   if (header) {
     const handleScroll = () => {
@@ -45,9 +45,7 @@
     window.addEventListener("scroll", handleScroll, { passive: true });
   }
 
-  const navLinks = Array.from(
-    document.querySelectorAll('.site-nav a[href^="#"]')
-  );
+  const navLinks = Array.from(document.querySelectorAll('.site-nav a[href^="#"]'));
   const sections = navLinks
     .map((link) => {
       const id = link.getAttribute("href");
@@ -60,9 +58,9 @@
   if ("IntersectionObserver" in window && sections.length) {
     const spy = new IntersectionObserver(
       (entries) => {
-        entries.forEach((eventry) => {
-          if (eventry.isIntersecting) {
-            const id = `#${eventry.target.id}`;
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const id = `#${entry.target.id}`;
             navLinks.forEach((link) => {
               link.classList.toggle("is-active", link.getAttribute("href") === id);
             });
@@ -74,17 +72,12 @@
     sections.forEach(({ el }) => spy.observe(el));
   }
 
-  if (yearTarget) {
-    yearTarget.textContent = String(new Date().getFullYear());
-  }
+  if (yearTarget) yearTarget.textContent = String(new Date().getFullYear());
 
   const revealTargets = document.querySelectorAll(
-    ".model__grid article, .impact__points li, .service, .process li, .safe__main, .safe__aside, .tenants__badge, .tenant-value__why, .tenant-value__includes, .pricing__bar, .diff__list li, .banner__inner, .contact__form"
+    ".path-card, .impact__points li, .process li, .safe__main, .safe__aside, .tenants__badge, .tenant-value__why, .tenant-value__includes, .pricing__bar, .diff__list li, .trust figure, .banner__inner, .contact__panel"
   );
-  const reduceMotion = window.matchMedia(
-    "(prefers-reduced-motion: reduce)"
-  ).matches;
-
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   if (!reduceMotion && "IntersectionObserver" in window && revealTargets.length) {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -95,7 +88,7 @@
           }
         });
       },
-      { threshold: 0.14 }
+      { threshold: 0.12 }
     );
     revealTargets.forEach((el) => {
       el.classList.add("reveal");
@@ -103,67 +96,109 @@
     });
   }
 
-  const form = document.querySelector(".contact__form");
-  const feedback = form?.querySelector(".contact__feedback");
-
-  const setFieldError = (field, message) => {
-    if (!field) return;
-    const wrapper = field.closest(".field");
-    if (!wrapper) return;
-    let errorEl = wrapper.querySelector(".field-error");
-    if (message) {
-      wrapper.classList.add("has-error");
-      if (!errorEl) {
-        errorEl = document.createElement("p");
-        errorEl.className = "field-error";
-        wrapper.appendChild(errorEl);
-      }
-      errorEl.textContent = message;
-      field.setAttribute("aria-invalid", "true");
-    } else {
-      wrapper.classList.remove("has-error");
-      if (errorEl) errorEl.remove();
-      field.removeAttribute("aria-invalid");
+  const setRole = (rol) => {
+    if (!form) return;
+    const radio = form.querySelector(`input[name="rol"][value="${rol}"]`);
+    if (radio) {
+      radio.checked = true;
+      radio.dispatchEvent(new Event("change", { bubbles: true }));
     }
   };
 
-  const validateField = (field) => {
-    if (
-      !(field instanceof HTMLInputElement) &&
-      !(field instanceof HTMLTextAreaElement)
-    ) {
-      return true;
-    }
-    if (field.type === "checkbox") {
-      if (field.required && !field.checked) {
-        setFieldError(field, "Necesitamos tu consentimiento.");
+  const setInteres = (interes) => {
+    if (!form || !interes) return;
+    const radio = form.querySelector(`input[name="interes"][value="${interes}"]`);
+    if (radio) radio.checked = true;
+  };
+
+  const syncFormExtras = () => {
+    if (!form) return;
+    const rol = form.querySelector('input[name="rol"]:checked')?.value || "propietario";
+    form.querySelectorAll(".form-extra").forEach((block) => {
+      const show = block.getAttribute("data-for") === rol;
+      block.hidden = !show;
+      block.querySelectorAll("input, textarea, select").forEach((input) => {
+        if (input.name === "interes") return;
+        if (!show) {
+          if (input.type !== "radio" && input.type !== "checkbox") input.value = "";
+        }
+      });
+    });
+  };
+
+  document.querySelectorAll("[data-rol]").forEach((el) => {
+    el.addEventListener("click", () => {
+      const rol = el.getAttribute("data-rol");
+      const interes = el.getAttribute("data-interes");
+      if (rol && rol !== "otra") setRole(rol);
+      if (interes) setInteres(interes);
+    });
+  });
+
+  if (form) {
+    const FORMSPREE_ENDPOINT = "https://formspree.io/f/xykrrrzw";
+
+    form.querySelectorAll('input[name="rol"]').forEach((input) => {
+      input.addEventListener("change", syncFormExtras);
+    });
+    syncFormExtras();
+
+    form.querySelectorAll('a[href*="privacidad"]').forEach((link) => {
+      link.addEventListener("click", (event) => event.stopPropagation());
+    });
+
+    const setFieldError = (field, message) => {
+      const wrapper = field.closest(".field") || field.closest(".field--check");
+      if (!wrapper) return;
+      let errorEl = wrapper.querySelector(".field-error");
+      if (message) {
+        wrapper.classList.add("has-error");
+        if (!errorEl) {
+          errorEl = document.createElement("p");
+          errorEl.className = "field-error";
+          wrapper.appendChild(errorEl);
+        }
+        errorEl.textContent = message;
+        field.setAttribute("aria-invalid", "true");
+      } else {
+        wrapper.classList.remove("has-error");
+        if (errorEl) errorEl.remove();
+        field.removeAttribute("aria-invalid");
+      }
+    };
+
+    const validateField = (field) => {
+      if (
+        !(field instanceof HTMLInputElement) &&
+        !(field instanceof HTMLTextAreaElement)
+      ) {
+        return true;
+      }
+      if (field.disabled || field.closest("[hidden]")) {
+        setFieldError(field, "");
+        return true;
+      }
+      if (field.type === "checkbox") {
+        if (field.required && !field.checked) {
+          setFieldError(field, "Necesitamos tu consentimiento.");
+          return false;
+        }
+        setFieldError(field, "");
+        return true;
+      }
+      if (field.required && field.value.trim() === "") {
+        setFieldError(field, "Este campo es obligatorio.");
+        return false;
+      }
+      if (field.type === "email" && field.value && !field.checkValidity()) {
+        setFieldError(field, "Revisa el formato del email.");
         return false;
       }
       setFieldError(field, "");
       return true;
-    }
-    if (field.required && field.value.trim() === "") {
-      setFieldError(field, "Este campo es obligatorio.");
-      return false;
-    }
-    if (field.type === "email" && field.value && !field.checkValidity()) {
-      setFieldError(field, "Revisa el formato del email.");
-      return false;
-    }
-    setFieldError(field, "");
-    return true;
-  };
+    };
 
-  if (form) {
-    const FORMSPREE_ENDPOINT = "https://formspree.io/f/xykrrrzw";
     const fields = form.querySelectorAll("input, textarea");
-
-    form.querySelectorAll('a[href*="privacidad"]').forEach((link) => {
-      link.addEventListener("click", (event) => {
-        event.stopPropagation();
-      });
-    });
-
     fields.forEach((field) => {
       field.addEventListener("blur", () => validateField(field));
       field.addEventListener("input", () => {
@@ -173,11 +208,39 @@
       });
     });
 
+    const showSuccess = () => {
+      if (form) form.hidden = true;
+      if (successPanel) {
+        successPanel.hidden = false;
+        successPanel.focus?.();
+      }
+      if (contactPanel) contactPanel.classList.add("is-success");
+    };
+
+    const showForm = () => {
+      if (form) {
+        form.hidden = false;
+        form.reset();
+        syncFormExtras();
+      }
+      if (successPanel) successPanel.hidden = true;
+      if (contactPanel) contactPanel.classList.remove("is-success");
+      if (feedback) {
+        feedback.className = "contact__feedback";
+        feedback.textContent = "";
+      }
+    };
+
+    successPanel
+      ?.querySelector(".contact__success-reset")
+      ?.addEventListener("click", showForm);
+
     form.addEventListener("submit", async (event) => {
       event.preventDefault();
       let firstInvalid = null;
       fields.forEach((field) => {
         if (field.name === "_gotcha" || field.type === "hidden") return;
+        if (field.closest("[hidden]")) return;
         if (!validateField(field) && !firstInvalid) firstInvalid = field;
       });
 
@@ -205,12 +268,8 @@
         });
 
         if (response.ok) {
-          form.reset();
-          if (feedback) {
-            feedback.className = "contact__feedback is-success";
-            feedback.textContent =
-              "¡Gracias! Hemos recibido tu mensaje y te responderemos pronto.";
-          }
+          showSuccess();
+          if (window.plausible) window.plausible("Formulario enviado");
         } else {
           const data = await response.json().catch(() => null);
           const message =

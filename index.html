@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#0a1f3d" />
     <meta
       name="description"
-      content="Abre Puertas, agencia de hogar. Venta, alquiler, alquiler seguro y agencia personal para quien busca vivienda. Con rigor, cercanía e impacto social."
+      content="Abre Puertas, agencia de hogar en Rivas Vaciamadrid y entorno. Venta, alquiler, alquiler seguro y agencia personal para quien busca vivienda."
     />
     <title>Abre Puertas | Agencia de hogar</title>
     <link rel="icon" type="image/png" href="assets/abrepuertas-icon.png" />
@@ -16,7 +16,12 @@
       href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=20260803d" />
+    <link rel="stylesheet" href="styles.css?v=20260803e" />
+    <script
+      defer
+      data-domain="abrepuertas.org"
+      src="https://plausible.io/js/script.js"
+    ></script>
   </head>
   <body>
     <a class="skip-link" href="#inicio">Saltar al contenido</a>
@@ -52,7 +57,7 @@
           <a href="#impacto">Impacto</a>
           <a href="#propietarios">Propietarios</a>
           <a href="#inquilinos">Busco hogar</a>
-          <a href="#diferencial">Por qué nosotros</a>
+          <a href="#confianza">Confianza</a>
           <a href="#contacto" class="site-nav__cta">Contactar</a>
         </nav>
       </div>
@@ -61,14 +66,13 @@
     <div class="nav-overlay" hidden></div>
 
     <main>
-      <!-- HERO -->
       <section class="hero" id="inicio" aria-labelledby="hero-title">
         <div class="hero__media" aria-hidden="true">
           <img
             src="assets/hero-hogar.jpg"
             alt=""
-            width="1600"
-            height="1412"
+            width="1800"
+            height="949"
             decoding="async"
             fetchpriority="high"
           />
@@ -78,6 +82,7 @@
         <div class="hero__content">
           <p class="hero__brand">Abre Puertas</p>
           <p class="hero__tagline">Abrimos oportunidades. Creamos hogares.</p>
+          <p class="hero__zone">Rivas Vaciamadrid y entorno de Madrid</p>
           <h1 id="hero-title">
             No somos una inmobiliaria más.
             <span>Somos una agencia de hogar.</span>
@@ -88,48 +93,50 @@
             sentirse solo.
           </p>
           <div class="hero__actions">
-            <a class="button button--primary" href="#propietarios">Soy propietario</a>
-            <a class="button button--ghost" href="#inquilinos">Busco hogar</a>
+            <a class="button button--primary" href="#contacto" data-rol="propietario">
+              Quiero valorar mi vivienda
+            </a>
+            <a class="button button--ghost" href="#contacto" data-rol="inquilino">
+              Quiero mi agencia personal
+            </a>
           </div>
           <p class="hero__promise">Tu casa. Tu decisión. Nuestro compromiso.</p>
         </div>
       </section>
 
-      <!-- MODELO -->
-      <section class="model" aria-labelledby="model-title">
-        <div class="model__inner">
+      <section class="paths" aria-labelledby="paths-title">
+        <div class="paths__inner">
           <p class="section-label">Una forma distinta</p>
-          <h2 id="model-title">
+          <h2 id="paths-title">
             Las inmobiliarias tradicionales parten del inmueble.
             <em>Nosotros también partimos de la persona.</em>
           </h2>
-          <div class="model__grid">
-            <article>
-              <h3>Para la propiedad</h3>
-              <p>
-                Valoramos, filtramos y acompañamos la venta o el alquiler con
-                criterio. Menos ruido, mejores perfiles y tranquilidad hasta la firma.
-              </p>
-            </article>
-            <article>
-              <h3>Para quien busca hogar</h3>
-              <p>
-                No eres un expediente. Te conocemos, preparamos tu perfil y
-                buscamos por ti oportunidades reales —también fuera de portales.
-              </p>
-            </article>
-            <article>
-              <h3>Para el barrio</h3>
-              <p>
-                Nuestro beneficio se transforma en becas y apoyo real al acceso
-                a la vivienda: fianza o reducción de alquiler.
-              </p>
-            </article>
+          <div class="paths__grid">
+            <a class="path-card" href="#propietarios">
+              <h3>Propietarios</h3>
+              <p>Venta, alquiler y alquiler seguro. Menos ruido, mejores perfiles.</p>
+              <span>Ver cómo trabajamos →</span>
+            </a>
+            <a class="path-card path-card--accent" href="#inquilinos">
+              <h3>Busco hogar</h3>
+              <p>Agencia personal: te conocemos, preparamos tu perfil y buscamos por ti.</p>
+              <span>Ver el servicio →</span>
+            </a>
+            <a class="path-card" href="#impacto">
+              <h3>Impacto social</h3>
+              <p>El beneficio se transforma en becas y apoyo real al acceso a vivienda.</p>
+              <span>Conocer el fondo →</span>
+            </a>
           </div>
+          <ul class="services-strip" aria-label="Servicios">
+            <li>Compra-venta</li>
+            <li>Alquiler</li>
+            <li>Alquiler seguro</li>
+            <li>Agencia personal</li>
+          </ul>
         </div>
       </section>
 
-      <!-- IMPACTO -->
       <section class="impact" id="impacto" aria-labelledby="impact-title">
         <div class="impact__inner">
           <div class="impact__copy">
@@ -139,39 +146,20 @@
             </h2>
             <p>
               Creamos un fondo económico para becar a familias con más
-              dificultades. Apoyo concreto: ayuda con la fianza o una reducción
-              del alquiler. No es marketing: forma parte de cómo entendemos el oficio.
+              dificultades: ayuda con la fianza o una reducción del alquiler.
+              No es un gesto puntual: forma parte de cómo entendemos el oficio.
             </p>
           </div>
           <ul class="impact__points">
             <li>
-              <span class="impact__icon" aria-hidden="true">
-                <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6">
-                  <path d="M8 18 20 8l12 10v14H8V18Z" />
-                  <path d="M16 32V22h8v10" />
-                </svg>
-              </span>
               <strong>Fondo propio</strong>
               <span>Becas para quien necesita un empujón real al acceder a un hogar.</span>
             </li>
             <li>
-              <span class="impact__icon" aria-hidden="true">
-                <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6">
-                  <circle cx="20" cy="20" r="12" />
-                  <path d="M20 14v12M15 19h10" />
-                </svg>
-              </span>
               <strong>Apoyo concreto</strong>
               <span>Fianza o reducción de alquiler, valorado caso a caso.</span>
             </li>
             <li>
-              <span class="impact__icon" aria-hidden="true">
-                <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6">
-                  <path d="M12 28c0-4.4 3.6-8 8-8s8 3.6 8 8" />
-                  <circle cx="20" cy="14" r="4.5" />
-                  <path d="M8 32h24" />
-                </svg>
-              </span>
               <strong>Propósito en cada operación</strong>
               <span>Vender o alquilar también puede abrir puertas a otras personas.</span>
             </li>
@@ -179,121 +167,39 @@
         </div>
       </section>
 
-      <!-- SERVICIOS -->
-      <section class="services" id="servicios" aria-labelledby="services-title">
-        <div class="services__intro">
-          <p class="section-label">Servicios</p>
-          <h2 id="services-title">Todo lo que necesitáis para abrir una puerta.</h2>
-        </div>
-        <div class="services__grid">
-          <article class="service">
-            <span class="service__icon" aria-hidden="true">
-              <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6">
-                <path d="M8 18 20 8l12 10v14H8V18Z" />
-                <path d="M16 32V22h8v10" />
-              </svg>
-            </span>
-            <h3>Compra-venta</h3>
-            <p>Valoración, difusión y acompañamiento hasta la firma.</p>
-          </article>
-          <article class="service">
-            <span class="service__icon" aria-hidden="true">
-              <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6">
-                <rect x="10" y="12" width="20" height="16" rx="2" />
-                <path d="M10 18h20" />
-              </svg>
-            </span>
-            <h3>Alquiler</h3>
-            <p>Filtrado con criterio y humanidad. Menos desgaste, mejores perfiles.</p>
-          </article>
-          <article class="service">
-            <span class="service__icon" aria-hidden="true">
-              <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6">
-                <path d="M20 8v24M12 14l8-6 8 6" />
-                <path d="M12 32h16" />
-                <circle cx="20" cy="22" r="4" />
-              </svg>
-            </span>
-            <h3>Alquiler seguro</h3>
-            <p>Inquilinos verificados, documentación previa y proceso riguroso.</p>
-          </article>
-          <article class="service service--accent">
-            <span class="service__icon" aria-hidden="true">
-              <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6">
-                <circle cx="20" cy="14" r="5" />
-                <path d="M10 30c1.5-5 4.5-7 10-7s8.5 2 10 7" />
-              </svg>
-            </span>
-            <h3>Agencia personal</h3>
-            <p>Para quien busca hogar: te representamos y buscamos por ti.</p>
-          </article>
-        </div>
-      </section>
-
-      <!-- PROPIETARIOS -->
       <section class="audience" id="propietarios" aria-labelledby="owners-title">
         <div class="audience__head">
           <p class="section-label">Para propietarios</p>
           <h2 id="owners-title">Qué hacemos con tu vivienda.</h2>
           <p>
             Te quitamos el ruido. Valoramos, preparamos, filtramos y te
-            acompañamos hasta la firma —con rigor y cercanía.
+            acompañamos hasta la firma.
           </p>
         </div>
 
         <ol class="process">
           <li>
-            <span class="process__icon" aria-hidden="true">
-              <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6">
-                <circle cx="18" cy="18" r="8" />
-                <path d="m24 24 6 6" />
-                <path d="M14 18h8M18 14v8" />
-              </svg>
-            </span>
+            <span class="process__num">01</span>
             <h3>Valoramos</h3>
             <p>Análisis realista para una estrategia que encaje contigo.</p>
           </li>
           <li>
-            <span class="process__icon" aria-hidden="true">
-              <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6">
-                <path d="M12 28V12l8-4 8 4v16" />
-                <circle cx="20" cy="18" r="3" />
-              </svg>
-            </span>
+            <span class="process__num">02</span>
             <h3>Preparamos y difundimos</h3>
             <p>Presentación cuidada y difusión con criterio, no a volumen.</p>
           </li>
           <li>
-            <span class="process__icon" aria-hidden="true">
-              <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6">
-                <circle cx="14" cy="16" r="4" />
-                <circle cx="26" cy="16" r="4" />
-                <path d="M8 28c1-4 3.5-6 6-6s5 2 6 4" />
-                <path d="M20 26c1-4 3.5-6 6-6s5 2 6 6" />
-              </svg>
-            </span>
+            <span class="process__num">03</span>
             <h3>Filtramos</h3>
             <p>Calidad de perfiles frente a cantidad de visitas.</p>
           </li>
           <li>
-            <span class="process__icon" aria-hidden="true">
-              <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6">
-                <rect x="10" y="12" width="20" height="18" rx="2" />
-                <path d="M10 18h20M16 10v4M24 10v4" />
-                <path d="m16 26 3 3 6-7" />
-              </svg>
-            </span>
+            <span class="process__num">04</span>
             <h3>Organizamos visitas</h3>
             <p>Agenda ordenada, sin agobios ni improvisación.</p>
           </li>
           <li>
-            <span class="process__icon" aria-hidden="true">
-              <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6">
-                <path d="M12 10h12v20H12z" />
-                <path d="M16 16h4M16 20h4M16 24h3" />
-                <path d="m24 22 4 4 6-8" />
-              </svg>
-            </span>
+            <span class="process__num">05</span>
             <h3>Hasta la firma</h3>
             <p>Cuidamos el proceso y las decisiones clave.</p>
           </li>
@@ -302,20 +208,30 @@
         <div class="safe" id="alquiler-seguro">
           <div class="safe__main">
             <p class="section-label">Alquiler seguro</p>
-            <h3>Candidatos ya analizados, documentados y acompañados.</h3>
-            <p>
-              En lugar de decenas de contactos sin filtrar, conoces perfiles que
-              encajan con tu vivienda, han aportado documentación y buscan una
-              relación estable. No sustituimos garantías legales: sí garantizamos
-              un proceso riguroso, transparente y humano.
-            </p>
-            <ul class="check-list">
-              <li>Valoración económica y personal previa</li>
-              <li>Documentación aportada antes de la visita</li>
-              <li>Menos visitas innecesarias, más tranquilidad</li>
-              <li>Presentación honesta del encaje</li>
-            </ul>
-            <a class="button button--primary" href="#contacto">Quiero alquilar con tranquilidad</a>
+            <h3>Tranquilidad con un proceso riguroso —sin promesas imposibles.</h3>
+            <div class="safe__cols">
+              <div>
+                <p class="safe__col-title">Qué incluye</p>
+                <ul class="check-list">
+                  <li>Candidatos analizados, documentados y acompañados</li>
+                  <li>Valoración económica y personal previa</li>
+                  <li>Documentación aportada antes de la visita</li>
+                  <li>Presentación honesta del encaje</li>
+                  <li>Menos visitas innecesarias</li>
+                </ul>
+              </div>
+              <div>
+                <p class="safe__col-title">Qué no es</p>
+                <ul class="check-list check-list--muted">
+                  <li>No es un seguro de impago ni un aval bancario</li>
+                  <li>No sustituye garantías legales o económicas</li>
+                  <li>No prometemos cero incidencias</li>
+                </ul>
+              </div>
+            </div>
+            <a class="button button--primary" href="#contacto" data-rol="propietario" data-interes="alquiler-seguro">
+              Quiero alquilar con tranquilidad
+            </a>
           </div>
           <aside class="safe__aside">
             <p class="safe__quote">
@@ -327,26 +243,22 @@
         </div>
       </section>
 
-      <!-- INQUILINOS -->
       <section class="tenants" id="inquilinos" aria-labelledby="tenants-title">
         <div class="tenants__hero">
           <div class="tenants__copy">
             <p class="section-label">Para quien busca hogar</p>
-            <h2 id="tenants-title">
-              Buscar piso no debería hacerte sentir tan solo.
-            </h2>
+            <h2 id="tenants-title">Buscar piso no debería hacerte sentir tan solo.</h2>
             <p>
-              El alquiler se ha vuelto competitivo y, a menudo, deshumanizado.
-              En Abre Puertas no nos limitamos a enseñar pisos: primero te
-              conocemos, preparamos tu candidatura y te representamos ante
-              propietarios e inmobiliarias.
+              No eres un expediente. Primero te conocemos, preparamos tu
+              candidatura y buscamos activamente viviendas —también fuera de
+              portales— que realmente encajen contigo.
             </p>
           </div>
           <aside class="tenants__badge">
             <p class="tenants__badge-kicker">Agencia personal de hogar</p>
             <p>
-              No eres un expediente. Te conocemos, preparamos tu perfil y
-              buscamos por ti oportunidades reales de alquiler.
+              Te representamos ante propietarios e inmobiliarias y defendemos
+              la calidad de tu candidatura.
             </p>
           </aside>
         </div>
@@ -354,43 +266,43 @@
         <ol class="process process--six">
           <li>
             <span class="process__num">01</span>
-            <h3>Escuchamos tu necesidad</h3>
-            <p>Situación, prioridades y el tipo de hogar que buscas.</p>
+            <h3>Escuchamos</h3>
+            <p>Tu situación, prioridades y tipo de hogar.</p>
           </li>
           <li>
             <span class="process__num">02</span>
-            <h3>Definimos tu perfil</h3>
-            <p>Presupuesto y solvencia para una búsqueda realista.</p>
+            <h3>Definimos perfil</h3>
+            <p>Presupuesto y solvencia realistas.</p>
           </li>
           <li>
             <span class="process__num">03</span>
-            <h3>Preparamos tu candidatura</h3>
-            <p>Documentación clara, profesional y transparente.</p>
+            <h3>Candidatura</h3>
+            <p>Documentación clara y profesional.</p>
           </li>
           <li>
             <span class="process__num">04</span>
             <h3>Buscamos por ti</h3>
-            <p>Publicadas y también oportunidades no publicadas.</p>
+            <p>Publicadas y no publicadas.</p>
           </li>
           <li>
             <span class="process__num">05</span>
-            <h3>Hablamos con propietarios</h3>
-            <p>Presentamos tu perfil y construimos confianza.</p>
+            <h3>Presentamos</h3>
+            <p>Hablamos con propietarios.</p>
           </li>
           <li>
             <span class="process__num">06</span>
-            <h3>Te acompañamos hasta la firma</h3>
-            <p>Visitas, negociación y cierre con alguien a tu lado.</p>
+            <h3>Hasta la firma</h3>
+            <p>Visitas, negociación y cierre.</p>
           </li>
         </ol>
 
         <div class="tenant-value">
           <div class="tenant-value__why">
-            <h3>¿Por qué elegir Abre Puertas?</h3>
+            <h3>¿Por qué Abre Puertas?</h3>
             <ul>
               <li>
                 <strong>Rigor profesional</strong>
-                <span>Conocemos, verificamos y valoramos el encaje antes de presentar.</span>
+                <span>Verificamos y valoramos el encaje antes de presentar.</span>
               </li>
               <li>
                 <strong>Acompañamiento humano</strong>
@@ -398,7 +310,7 @@
               </li>
               <li>
                 <strong>Más credibilidad</strong>
-                <span>Tu candidatura llega trabajada y con documentación lista.</span>
+                <span>Tu candidatura llega trabajada y documentada.</span>
               </li>
               <li>
                 <strong>Impacto social</strong>
@@ -407,25 +319,12 @@
             </ul>
           </div>
           <aside class="tenant-value__includes">
-            <h3>Lo que incluye el servicio</h3>
-            <p>Un acompañamiento real para encontrar hogar con más opciones y menos desgaste.</p>
+            <h3>Lo que incluye</h3>
             <ul>
-              <li>
-                <strong>Diagnóstico y estrategia</strong>
-                Búsqueda viable y sostenible.
-              </li>
-              <li>
-                <strong>Perfil Abre Puertas</strong>
-                Candidatura clara y profesional.
-              </li>
-              <li>
-                <strong>Búsqueda proactiva</strong>
-                No esperamos solo a que salga un anuncio.
-              </li>
-              <li>
-                <strong>Interlocución y acompañamiento</strong>
-                Hasta la firma del contrato.
-              </li>
+              <li><strong>Diagnóstico y estrategia</strong> Búsqueda viable.</li>
+              <li><strong>Perfil Abre Puertas</strong> Candidatura profesional.</li>
+              <li><strong>Búsqueda proactiva</strong> No solo portales.</li>
+              <li><strong>Acompañamiento</strong> Hasta la firma.</li>
             </ul>
             <p class="tenant-value__motto">Abrimos oportunidades. Creamos hogares.</p>
           </aside>
@@ -436,78 +335,108 @@
             <div class="pricing__info">
               <p class="pricing__label">Agencia personal de hogar</p>
               <p class="pricing__desc">Búsqueda personalizada y acompañamiento integral</p>
+              <p class="pricing__price">390&nbsp;€ <span>+ IVA</span></p>
             </div>
-            <p class="pricing__price">390&nbsp;€ <span>+ IVA</span></p>
             <ul class="pricing__perks">
               <li>Pago único</li>
               <li>Sin costes adicionales al firmar</li>
               <li>Si no encontramos vivienda en 60 días, te devolvemos el dinero*</li>
             </ul>
-            <a class="button button--primary" href="#contacto">Quiero empezar</a>
+            <a class="button button--primary" href="#contacto" data-rol="inquilino">
+              Quiero mi agencia personal
+            </a>
           </div>
           <p class="pricing__legal">* Según condiciones del servicio.</p>
         </div>
       </section>
 
-      <!-- DIFERENCIALES -->
       <section class="diff" id="diferencial" aria-labelledby="diff-title">
         <div class="diff__intro">
           <p class="section-label">Qué nos hace diferentes</p>
-          <h2 id="diff-title">
-            Personas verificadas. Viviendas adecuadas. Relaciones de confianza.
-          </h2>
+          <h2 id="diff-title">Personas verificadas. Viviendas adecuadas. Relaciones de confianza.</h2>
         </div>
         <ul class="diff__list">
           <li>
             <span class="diff__letter" aria-hidden="true">A</span>
             <strong>Agencia de hogar</strong>
-            <span>No tratamos la vivienda solo como un activo: escuchamos, asesoramos y adaptamos la estrategia a cada caso.</span>
+            <span>Escuchamos y adaptamos la estrategia a cada caso.</span>
           </li>
           <li>
             <span class="diff__letter" aria-hidden="true">B</span>
-            <strong>Más filtrado, menos desgaste</strong>
-            <span>Calidad frente a volumen: mejores perfiles y menos visitas improductivas.</span>
+            <strong>Más filtrado</strong>
+            <span>Calidad frente a volumen: menos visitas improductivas.</span>
           </li>
           <li>
             <span class="diff__letter" aria-hidden="true">C</span>
-            <strong>Servicio personal para candidatos</strong>
-            <span>También partimos de la persona y buscamos activamente su hogar, incluso antes de publicar.</span>
+            <strong>También para candidatos</strong>
+            <span>Partimos de la persona y buscamos activamente su hogar.</span>
           </li>
           <li>
             <span class="diff__letter" aria-hidden="true">D</span>
-            <strong>Confianza para la propiedad</strong>
-            <span>Presentamos compradores e inquilinos con más información, acompañamiento y credibilidad.</span>
+            <strong>Confianza</strong>
+            <span>Más información y credibilidad para la propiedad.</span>
           </li>
           <li>
             <span class="diff__letter" aria-hidden="true">E</span>
-            <strong>Impacto social real</strong>
-            <span>El beneficio se convierte en becas y apoyo concreto —fianza o reducción de alquiler— para quien más lo necesita.</span>
+            <strong>Impacto real</strong>
+            <span>Becas y apoyo concreto al acceso a vivienda.</span>
           </li>
         </ul>
       </section>
 
-      <!-- BANNER -->
+      <section class="trust" id="confianza" aria-labelledby="trust-title">
+        <div class="trust__inner">
+          <p class="section-label">Confianza</p>
+          <h2 id="trust-title">Cómo se siente trabajar con Abre Puertas.</h2>
+          <div class="trust__grid">
+            <figure>
+              <blockquote>
+                <p>Un interlocutor claro, sin ruido ni promesas vacías.</p>
+              </blockquote>
+              <figcaption>Acompañamiento humano</figcaption>
+            </figure>
+            <figure>
+              <blockquote>
+                <p>Perfiles trabajados y documentación lista antes de visitar.</p>
+              </blockquote>
+              <figcaption>Más credibilidad</figcaption>
+            </figure>
+            <figure>
+              <blockquote>
+                <p>Cada operación bien hecha también puede abrir puertas a otras personas.</p>
+              </blockquote>
+              <figcaption>Impacto con propósito</figcaption>
+            </figure>
+          </div>
+          <!--
+          <p class="trust__note">
+            Estamos recopilando testimonios reales de quienes ya han abierto una
+            puerta con nosotros.
+            Si has trabajado con Abre Puertas, cuéntanos tu experiencia.
+          </p>
+          -->
+        </div>
+      </section>
+
       <section class="banner" aria-label="Llamada a la acción">
         <div class="banner__inner">
           <p>
             Si conoces a alguien que quiera vender o alquilar su casa,
             <strong>me encantará ayudarle.</strong>
-            Queremos impulsar un cambio social real: que más personas puedan
-            acceder a un hogar con dignidad y oportunidades.
+            Queremos que más personas puedan acceder a un hogar con dignidad.
           </p>
           <p class="banner__thanks">¡Gracias por abrir puertas!</p>
           <a class="button button--on-orange" href="#contacto">Hablemos</a>
         </div>
       </section>
 
-      <!-- CONTACTO -->
       <section class="contact" id="contacto" aria-labelledby="contact-title">
         <div class="contact__intro">
           <p class="section-label">Contacto</p>
           <h2 id="contact-title">Cuéntanos qué puerta quieres abrir.</h2>
           <p>
-            Una primera conversación clara para entender qué necesitas.
-            Te respondemos en menos de 24&nbsp;h.
+            Te respondemos en menos de 24&nbsp;h. Operamos en
+            <strong>Rivas Vaciamadrid y entorno de Madrid</strong>.
           </p>
           <ul class="contact__channels">
             <li>
@@ -536,85 +465,133 @@
           </ul>
         </div>
 
-        <form
-          class="contact__form"
-          action="https://formspree.io/f/xykrrrzw"
-          method="POST"
-          novalidate
-          aria-label="Formulario de contacto"
-        >
-          <input
-            type="hidden"
-            name="_subject"
-            value="Nuevo mensaje desde abrepuertas.casa"
-          />
-          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hp-field" aria-hidden="true" />
+        <div class="contact__panel">
+          <form
+            class="contact__form"
+            action="https://formspree.io/f/xykrrrzw"
+            method="POST"
+            novalidate
+            aria-label="Formulario de contacto"
+          >
+            <input type="hidden" name="_subject" value="Nuevo mensaje desde abrepuertas.org" />
+            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hp-field" aria-hidden="true" />
 
-          <fieldset class="contact__role" aria-label="¿Quién eres?">
-            <legend>¿Quién eres?</legend>
-            <label>
-              <input type="radio" name="rol" value="propietario" checked />
-              <span>Propietario</span>
-            </label>
-            <label>
-              <input type="radio" name="rol" value="inquilino" />
-              <span>Busco hogar</span>
-            </label>
-            <label>
-              <input type="radio" name="rol" value="inmobiliaria" />
-              <span>Inmobiliaria</span>
-            </label>
-          </fieldset>
+            <fieldset class="contact__role" aria-label="¿Quién eres?">
+              <legend>¿Quién eres?</legend>
+              <label>
+                <input type="radio" name="rol" value="propietario" checked />
+                <span>Propietario</span>
+              </label>
+              <label>
+                <input type="radio" name="rol" value="inquilino" />
+                <span>Busco hogar</span>
+              </label>
+              <label>
+                <input type="radio" name="rol" value="inmobiliaria" />
+                <span>Inmobiliaria</span>
+              </label>
+            </fieldset>
 
-          <label class="field">
-            <span>Nombre</span>
-            <input type="text" id="nombre" name="nombre" autocomplete="name" required />
-          </label>
+            <div class="form-extra" data-for="propietario">
+              <fieldset class="contact__role contact__role--sub" aria-label="¿Qué necesitas?">
+                <legend>¿Qué necesitas?</legend>
+                <label>
+                  <input type="radio" name="interes" value="venta" checked />
+                  <span>Vender</span>
+                </label>
+                <label>
+                  <input type="radio" name="interes" value="alquiler" />
+                  <span>Alquilar</span>
+                </label>
+                <label>
+                  <input type="radio" name="interes" value="alquiler-seguro" />
+                  <span>Alquiler seguro</span>
+                </label>
+              </fieldset>
+            </div>
 
-          <div class="field-row">
+            <div class="form-extra" data-for="inquilino" hidden>
+              <div class="field-row">
+                <label class="field">
+                  <span>Zona aproximada</span>
+                  <input type="text" name="zona" placeholder="Ej. Rivas, Vicálvaro…" />
+                </label>
+                <label class="field">
+                  <span>Presupuesto / mes</span>
+                  <input type="text" name="presupuesto" placeholder="Ej. 900–1100 €" />
+                </label>
+              </div>
+            </div>
+
+            <div class="form-extra" data-for="inmobiliaria" hidden>
+              <label class="field">
+                <span>Nombre de la inmobiliaria</span>
+                <input type="text" name="inmobiliaria_nombre" placeholder="Opcional" />
+              </label>
+            </div>
+
             <label class="field">
-              <span>Email</span>
-              <input type="email" id="email" name="email" autocomplete="email" required />
+              <span>Nombre</span>
+              <input type="text" id="nombre" name="nombre" autocomplete="name" required />
             </label>
+
+            <div class="field-row">
+              <label class="field">
+                <span>Email</span>
+                <input type="email" id="email" name="email" autocomplete="email" required />
+              </label>
+              <label class="field">
+                <span>Teléfono</span>
+                <input type="tel" id="telefono" name="telefono" autocomplete="tel" required />
+              </label>
+            </div>
+
             <label class="field">
-              <span>Teléfono</span>
-              <input type="tel" id="telefono" name="telefono" autocomplete="tel" required />
+              <span>Cuéntanos brevemente</span>
+              <textarea
+                id="mensaje"
+                name="mensaje"
+                rows="4"
+                placeholder="Cuéntanos tu situación en pocas líneas…"
+                required
+              ></textarea>
             </label>
+
+            <div class="field field--check">
+              <input type="checkbox" id="privacidad-check" name="privacidad" value="aceptada" required />
+              <label for="privacidad-check">
+                He leído y acepto la
+                <a href="/privacidad.html">política de privacidad</a>.
+              </label>
+            </div>
+
+            <button type="submit" class="button button--primary button--full">
+              Enviar mensaje
+            </button>
+            <p class="contact__feedback" role="status" aria-live="polite"></p>
+            <p class="contact__legal">Tus datos solo se usan para responderte.</p>
+          </form>
+
+          <div class="contact__success" hidden>
+            <p class="contact__success-kicker">Mensaje enviado</p>
+            <h3>¡Gracias! Te responderemos en menos de 24&nbsp;h.</h3>
+            <p>
+              Hemos recibido tu consulta. Si lo prefieres, también puedes
+              escribirnos ahora por WhatsApp.
+            </p>
+            <a
+              class="button button--primary"
+              href="https://wa.me/34682779349?text=Hola%20Abre%20Puertas%2C%20acabo%20de%20enviar%20el%20formulario%20y%20me%20gustar%C3%ADa%20hablar"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Abrir WhatsApp
+            </a>
+            <button type="button" class="button button--ghost-dark contact__success-reset">
+              Enviar otro mensaje
+            </button>
           </div>
-
-          <label class="field">
-            <span>Cuéntanos brevemente</span>
-            <textarea
-              id="mensaje"
-              name="mensaje"
-              rows="4"
-              placeholder="¿Vendes, alquilas, buscas hogar o alquiler seguro?"
-              required
-            ></textarea>
-          </label>
-
-          <div class="field field--check">
-            <input
-              type="checkbox"
-              id="privacidad-check"
-              name="privacidad"
-              value="aceptada"
-              required
-            />
-            <label for="privacidad-check">
-              He leído y acepto la
-              <a href="/privacidad.html">política de privacidad</a>.
-            </label>
-          </div>
-
-          <button type="submit" class="button button--primary button--full">
-            Enviar mensaje
-          </button>
-          <p class="contact__feedback" role="status" aria-live="polite"></p>
-          <p class="contact__legal">
-            Tus datos solo se usan para responderte. Nunca se comparten.
-          </p>
-        </form>
+        </div>
       </section>
     </main>
 
@@ -638,13 +615,15 @@
         <div class="site-footer__contact">
           <a href="mailto:luismi@abrepuertas.casa">luismi@abrepuertas.casa</a>
           <a href="tel:+34682779349">682 779 349</a>
-          <a href="https://www.abrepuertas.casa">www.abrepuertas.casa</a>
+          <a href="https://abrepuertas.org">abrepuertas.org</a>
         </div>
       </div>
       <div class="site-footer__bottom">
         <small>&copy; <span id="year"></span> Abre Puertas. Todos los derechos reservados.</small>
         <nav aria-label="Enlaces legales">
+          <a href="/aviso-legal.html">Aviso legal</a>
           <a href="/privacidad.html">Privacidad</a>
+          <a href="/cookies.html">Cookies</a>
         </nav>
       </div>
     </footer>
@@ -664,6 +643,6 @@
       </svg>
     </a>
 
-    <script src="script.js?v=20260803d"></script>
+    <script src="script.js?v=20260803e"></script>
   </body>
 </html>
