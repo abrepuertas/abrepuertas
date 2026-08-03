@@ -3,18 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#1a2238" />
+    <meta name="theme-color" content="#0a1f3d" />
     <meta
       name="description"
-      content="Abre Puertas: inmobiliaria de acompañamiento en Rivas Vaciamadrid. Confianza para propietarios y oportunidades de hogar para las personas. El 30% de los beneficios va a nuestra bolsa social de ayuda al acceso a vivienda digna."
+      content="Abre Puertas, la agencia personal de hogar del inquilino. Te conocemos, preparamos tu perfil y buscamos por ti oportunidades reales de alquiler. 390 € + IVA."
     />
-    <meta name="keywords" content="inmobiliaria Rivas Vaciamadrid, vender piso Rivas, alquilar piso Rivas, comprar vivienda Rivas, gestión integral inmobiliaria, acompañamiento inmobiliario, vivienda digna" />
-    <title>Abre Puertas | Inmobiliaria de acompañamiento en Rivas Vaciamadrid</title>
+    <title>Abre Puertas | Agencia personal de hogar</title>
     <link rel="icon" type="image/png" href="assets/abrepuertas-icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
@@ -25,18 +24,17 @@
     <header class="site-header" aria-label="Cabecera principal">
       <div class="site-header__inner">
         <a class="brand" href="#inicio" aria-label="Abre Puertas, ir al inicio">
-          <span class="brand__mark" aria-hidden="true">
-            <img
-              src="assets/abrepuertas-icon.png"
-              alt=""
-              width="40"
-              height="40"
-              decoding="async"
-              fetchpriority="high"
-            />
-          </span>
+          <img
+            class="brand__mark"
+            src="assets/abrepuertas-icon.png"
+            alt=""
+            width="40"
+            height="44"
+            decoding="async"
+            fetchpriority="high"
+          />
           <span class="brand__text">
-            <strong>Abre</strong>Puertas
+            Abre<span>Puertas</span>
           </span>
         </a>
 
@@ -53,13 +51,11 @@
         </button>
 
         <nav class="site-nav" id="site-nav" aria-label="Navegación principal">
-          <a href="#inicio">Inicio</a>
-          <a href="#nosotros">Quiénes somos</a>
-          <a href="#servicios">Servicios</a>
+          <a href="#como-funciona">Cómo funciona</a>
+          <a href="#incluye">El servicio</a>
+          <a href="#precio">Precio</a>
           <a href="#propietarios">Propietarios</a>
-          <a href="#hogar">Encontrar hogar</a>
-          <a href="#impacto">Impacto social</a>
-          <a href="#contacto" class="site-nav__cta">Contactar</a>
+          <a href="#contacto" class="site-nav__cta">Empezar</a>
         </nav>
       </div>
     </header>
@@ -67,484 +63,290 @@
     <div class="nav-overlay" hidden></div>
 
     <main>
-      <!-- 1. HERO -->
+      <!-- HERO -->
       <section class="hero" id="inicio" aria-labelledby="hero-title">
-        <div class="hero__frame" aria-hidden="false">
-          <span class="hero__pattern" aria-hidden="true"></span>
-          <span class="hero__monogram" aria-hidden="true">
-            <img
-              src="assets/abrepuertas-icon.png"
-              alt=""
-              width="600"
-              height="654"
-              decoding="async"
-              loading="lazy"
-            />
-          </span>
+        <div class="hero__media" aria-hidden="true">
+          <img
+            src="assets/hero-hogar.jpg"
+            alt=""
+            width="1600"
+            height="1412"
+            decoding="async"
+            fetchpriority="high"
+          />
+        </div>
+        <div class="hero__veil" aria-hidden="true"></div>
 
-          <div class="hero__content">
-            <p class="eyebrow">
-              <span class="eyebrow__dot" aria-hidden="true"></span>
-              Inmobiliaria de acompañamiento &middot; Rivas Vaciamadrid
-            </p>
-            <h1 id="hero-title">
-              <span class="hero__title-main">Abre</span>
-              <span class="hero__title-accent">Puertas</span>
-            </h1>
-            <p class="hero__caption" aria-hidden="true">
-              C O N F I A N Z A &nbsp;&middot;&nbsp; H O G A R &nbsp;&middot;&nbsp; P R O P Ó S I T O
-            </p>
-            <p class="hero__subtitle">
-              Confianza para propietarios. Oportunidades de hogar para las personas.
-              Acompañamos cada operación con criterio, cercanía y propósito.
-            </p>
-            <div class="hero__actions">
-              <a class="button button--primary" href="#propietarios">
-                Soy propietario
-                <span aria-hidden="true">&rarr;</span>
-              </a>
-              <a class="button button--ghost" href="#hogar">
-                Busco hogar
-              </a>
-            </div>
+        <div class="hero__content">
+          <p class="hero__brand">Abre Puertas</p>
+          <p class="hero__tagline">Abrimos oportunidades. Creamos hogares.</p>
+          <h1 id="hero-title">
+            Encontramos tu hogar.
+            <span>Con rigor, cercanía e impacto social.</span>
+          </h1>
+          <p class="hero__lead">
+            No eres un expediente. Te conocemos, preparamos tu perfil y buscamos
+            por ti oportunidades reales de alquiler.
+          </p>
+          <div class="hero__actions">
+            <a class="button button--primary" href="#contacto">
+              Quiero encontrar mi hogar
+            </a>
+            <a class="button button--ghost" href="#como-funciona">
+              Cómo funciona
+            </a>
           </div>
+        </div>
+      </section>
 
-          <a
-            class="hero__scroll"
-            href="#nosotros"
-            aria-label="Ir al siguiente bloque"
-          >
-            <span class="hero__scroll-line" aria-hidden="true"></span>
-            <span class="hero__scroll-text">Sigue bajando</span>
-            <span class="hero__scroll-arrow" aria-hidden="true">&darr;</span>
-          </a>
+      <!-- INTRO -->
+      <section class="intro" aria-labelledby="intro-title">
+        <div class="intro__inner">
+          <p class="section-label">Agencia personal de hogar</p>
+          <h2 id="intro-title">
+            Buscar piso no debería hacerte sentir tan solo.
+          </h2>
+          <p class="intro__text">
+            El alquiler se ha vuelto competitivo y, a menudo, deshumanizado.
+            En Abre Puertas no nos limitamos a enseñar pisos: primero te
+            conocemos, preparamos tu candidatura y te representamos ante
+            propietarios e inmobiliarias.
+          </p>
+          <p class="intro__highlight">
+            Las inmobiliarias tradicionales parten del inmueble. Nosotros
+            partimos de la persona.
+          </p>
+        </div>
+      </section>
 
-          <ul class="hero__chips" aria-label="Razones para confiar en Abre Puertas">
+      <!-- CÓMO FUNCIONA -->
+      <section class="process" id="como-funciona" aria-labelledby="process-title">
+        <div class="process__intro">
+          <p class="section-label">Qué hacemos por ti</p>
+          <h2 id="process-title">Un acompañamiento claro, de principio a fin.</h2>
+        </div>
+
+        <ol class="process__list">
+          <li>
+            <span class="process__num" aria-hidden="true">01</span>
+            <h3>Escuchamos tu necesidad</h3>
+            <p>Entendemos tu situación, prioridades y el tipo de hogar que buscas.</p>
+          </li>
+          <li>
+            <span class="process__num" aria-hidden="true">02</span>
+            <h3>Definimos tu perfil</h3>
+            <p>Analizamos presupuesto y solvencia para una búsqueda realista.</p>
+          </li>
+          <li>
+            <span class="process__num" aria-hidden="true">03</span>
+            <h3>Preparamos tu candidatura</h3>
+            <p>Organizamos tu documentación en un perfil profesional y transparente.</p>
+          </li>
+          <li>
+            <span class="process__num" aria-hidden="true">04</span>
+            <h3>Buscamos por ti</h3>
+            <p>Localizamos viviendas y exploramos también oportunidades no publicadas.</p>
+          </li>
+          <li>
+            <span class="process__num" aria-hidden="true">05</span>
+            <h3>Hablamos con propietarios</h3>
+            <p>Presentamos tu perfil y construimos confianza con quien alquila.</p>
+          </li>
+          <li>
+            <span class="process__num" aria-hidden="true">06</span>
+            <h3>Te acompañamos hasta la firma</h3>
+            <p>Visitas, negociación y cierre, con un profesional a tu lado.</p>
+          </li>
+        </ol>
+      </section>
+
+      <!-- POR QUÉ + INCLUYE -->
+      <section class="value" id="incluye" aria-labelledby="value-title">
+        <div class="value__why">
+          <p class="section-label">Por qué Abre Puertas</p>
+          <h2 id="value-title">Personas verificadas. Viviendas adecuadas. Relaciones de confianza.</h2>
+          <ul class="value__reasons">
             <li>
-              <span aria-hidden="true">&#10004;</span> Trato cercano
+              <strong>Rigor profesional</strong>
+              <span>Conocemos, verificamos y valoramos el encaje antes de presentar.</span>
             </li>
             <li>
-              <span aria-hidden="true">&#9873;</span> Rivas Vaciamadrid
+              <strong>Acompañamiento humano</strong>
+              <span>Dejas de enfrentarte solo al mercado: alguien te representa.</span>
             </li>
             <li>
-              <span aria-hidden="true">&#9825;</span> 30% impacto social
+              <strong>Más credibilidad</strong>
+              <span>Tu candidatura llega trabajada, clara y con documentación lista.</span>
+            </li>
+            <li>
+              <strong>Impacto social</strong>
+              <span>Abrimos oportunidades reales de acceso a un hogar digno.</span>
             </li>
           </ul>
         </div>
 
-        <aside class="hero__commitment" aria-label="Compromiso de Abre Puertas">
-          <div class="hero__commitment-figure" aria-hidden="true">
-            <img
-              src="assets/abrepuertas-icon.png"
-              alt=""
-              width="60"
-              height="65"
-              decoding="async"
-              loading="lazy"
-            />
-          </div>
-          <div class="hero__commitment-body">
-            <p class="hero__commitment-kicker">Compromiso Abre Puertas</p>
-            <p class="hero__commitment-text">
-              Destinamos el <strong>30% de nuestros beneficios operativos</strong> a
-              una bolsa propia para personas con dificultades de acceso a una
-              vivienda digna.
-            </p>
-          </div>
-          <a class="link-arrow hero__commitment-link" href="#impacto">
-            Conocer el impacto <span aria-hidden="true">&rarr;</span>
-          </a>
+        <aside class="value__includes" aria-labelledby="includes-title">
+          <h2 id="includes-title">Lo que incluye el servicio</h2>
+          <p>
+            Un acompañamiento real para encontrar hogar con más opciones y menos desgaste.
+          </p>
+          <ul>
+            <li>
+              <strong>Diagnóstico y estrategia</strong>
+              Definimos una búsqueda viable y sostenible.
+            </li>
+            <li>
+              <strong>Perfil Abre Puertas</strong>
+              Candidatura clara, profesional y bien presentada.
+            </li>
+            <li>
+              <strong>Búsqueda proactiva</strong>
+              No esperamos solo a que salga un anuncio.
+            </li>
+            <li>
+              <strong>Interlocución y acompañamiento</strong>
+              Contacto y apoyo hasta la firma del contrato.
+            </li>
+          </ul>
+          <p class="value__motto">Abrimos oportunidades. Creamos hogares.</p>
         </aside>
       </section>
 
-      <!-- 2. QUÉ ES ABRE PUERTAS -->
-      <section class="about" id="nosotros" aria-labelledby="about-title">
-        <p class="section-label">Quiénes somos</p>
-        <h2 id="about-title">
-          Una inmobiliaria distinta, con <em>rostro humano</em> y oficio inmobiliario.
-        </h2>
-        <div class="about__grid">
-          <p class="about__lead">
-            Nacimos en Rivas Vaciamadrid para ayudar a propietarios a vender y alquilar
-            con confianza, y a familias a acceder a un hogar con un trato cercano,
-            profesional y humano. No queremos ser una inmobiliaria tradicional centrada
-            solo en intermediar operaciones: somos una marca construida sobre tres
-            pilares.
-          </p>
-          <ul class="about__pillars">
-            <li>
-              <span class="about__pillar-num">01</span>
-              <strong>Rigor profesional</strong>
-              <p>Criterio inmobiliario, jurídico y financiero en cada decisión.</p>
-            </li>
-            <li>
-              <span class="about__pillar-num">02</span>
-              <strong>Acompañamiento humano</strong>
-              <p>Escucha, claridad y respeto en todo el proceso.</p>
-            </li>
-            <li>
-              <span class="about__pillar-num">03</span>
-              <strong>Impacto social real</strong>
-              <p>30% de beneficios destinado a vivienda digna para quien lo necesita.</p>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- 3. SERVICIOS -->
-      <section class="services" id="servicios" aria-labelledby="services-title">
-        <div class="services__intro">
-          <p class="section-label">Servicios</p>
-          <h2 id="services-title">
-            Cuatro formas de acompañarte, una sola manera de hacer las cosas.
-          </h2>
-          <p>
-            Diseñamos cada servicio para que la decisión sea clara, los plazos
-            realistas y los detalles, los nuestros. Tú decides hasta dónde nos
-            implicamos.
-          </p>
-        </div>
-
-        <div class="services__grid">
-          <article class="service-card">
-            <span class="service-card__icon" aria-hidden="true">&#9733;</span>
-            <h3>Venta</h3>
-            <p>
-              Valoración honesta, presentación cuidada y negociación con criterio.
-              Vendemos con cabeza fría y trato cálido.
-            </p>
-            <ul>
-              <li>Análisis de mercado en Rivas</li>
-              <li>Reportaje fotográfico profesional</li>
-              <li>Filtro de visitas y negociación</li>
-            </ul>
-          </article>
-
-          <article class="service-card">
-            <span class="service-card__icon" aria-hidden="true">&#9787;</span>
-            <h3>Alquiler</h3>
-            <p>
-              Filtramos inquilinos con responsabilidad y cuidamos tu vivienda como si
-              fuera nuestra. Sin sobresaltos.
-            </p>
-            <ul>
-              <li>Selección rigurosa de candidatos</li>
-              <li>Contrato y depósito en regla</li>
-              <li>Acompañamiento durante el alquiler</li>
-            </ul>
-          </article>
-
-          <article class="service-card">
-            <span class="service-card__icon" aria-hidden="true">&#9750;</span>
-            <h3>Gestión integral</h3>
-            <p>
-              Nos ocupamos de todo: documentación, fiscalidad, mantenimiento y
-              comunicación con inquilinos. Tú solo recibes la rentabilidad.
-            </p>
-            <ul>
-              <li>Coordinación de reparaciones</li>
-              <li>Gestión de cobros e impuestos</li>
-              <li>Reporting trimestral claro</li>
-            </ul>
-          </article>
-
-          <article class="service-card service-card--featured">
-            <span class="service-card__badge">Premium</span>
-            <span class="service-card__icon" aria-hidden="true">&#10047;</span>
-            <h3>Acompañamiento premium</h3>
-            <p>
-              Cuando una operación necesita más mimo: inversión, herencias, divorcios o
-              compras complejas. Un único interlocutor, máxima discreción.
-            </p>
-            <ul>
-              <li>Asesoría legal y fiscal coordinada</li>
-              <li>Búsqueda a medida fuera de portales</li>
-              <li>Acompañamiento personalizado</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
-      <!-- 4. POR QUÉ SOMOS DIFERENTES -->
-      <section class="differential" aria-labelledby="differential-title">
-        <div class="differential__intro">
-          <p class="section-label">Por qué somos diferentes</p>
-          <h2 id="differential-title">
-            No competimos por precio. <em>Competimos por confianza.</em>
-          </h2>
-        </div>
-        <ul class="differential__list">
-          <li>
-            <strong>Seguridad para el propietario, humanidad para quien busca hogar.</strong>
-            <p>
-              Una sola voz cuida los dos lados de la operación, sin perder de vista a
-              ninguno.
-            </p>
-          </li>
-          <li>
-            <strong>Hablamos de vivienda como hogar, no como activo.</strong>
-            <p>
-              Cada inmueble tiene una historia y cada decisión, una vida detrás. Lo
-              tenemos siempre presente.
-            </p>
-          </li>
-          <li>
-            <strong>Acompañamiento, criterio y claridad por encima del precio.</strong>
-            <p>
-              Te explicamos las cosas con palabras claras y nunca prometemos lo que no
-              podemos sostener.
-            </p>
-          </li>
-          <li>
-            <strong>Impacto social estructural.</strong>
-            <p>
-              El 30% de nuestros beneficios operativos va a una bolsa propia de ayuda al
-              acceso a vivienda digna.
-            </p>
-          </li>
-        </ul>
-      </section>
-
-      <!-- 5. PROPIETARIOS -->
-      <section class="audience audience--owners" id="propietarios" aria-labelledby="owners-title">
-        <div class="audience__media" aria-hidden="true">
-          <div class="audience__media-tag">Para propietarios</div>
-          <div class="audience__media-stat">
-            <strong>+10</strong>
-            <span>años acompañando ventas y alquileres</span>
+      <!-- PRECIO -->
+      <section class="pricing" id="precio" aria-labelledby="pricing-title">
+        <div class="pricing__card">
+          <div class="pricing__head">
+            <p class="section-label">Servicio</p>
+            <h2 id="pricing-title">Agencia personal de hogar</h2>
+            <p>Búsqueda personalizada y acompañamiento integral.</p>
           </div>
+          <div class="pricing__amount">
+            <p class="pricing__price">390&nbsp;€ <span>+ IVA</span></p>
+            <p class="pricing__note">Pago único</p>
+          </div>
+          <ul class="pricing__perks">
+            <li>Sin costes adicionales al firmar</li>
+            <li>Si no encontramos tu vivienda en 60 días, te devolvemos el dinero*</li>
+            <li>Un profesional que te conoce y defiende tu candidatura</li>
+          </ul>
+          <a class="button button--primary" href="#contacto">Empezar ahora</a>
+          <p class="pricing__legal">* Según condiciones del servicio.</p>
         </div>
-        <div class="audience__content">
-          <p class="section-label">Propietarios</p>
+      </section>
+
+      <!-- PROPIETARIOS -->
+      <section class="owners" id="propietarios" aria-labelledby="owners-title">
+        <div class="owners__inner">
+          <p class="section-label">Para propietarios e inmobiliarias</p>
           <h2 id="owners-title">
-            ¿Vendes o alquilas tu vivienda? Te quitamos el ruido.
+            Candidatos ya analizados, documentados y acompañados.
           </h2>
           <p>
-            Filtramos bien, ordenamos el proceso y cuidamos tu propiedad como si fuera
-            nuestra. Te explicamos cada paso, te acompañamos en las decisiones difíciles
-            y nos hacemos cargo de los detalles.
+            En lugar de decenas de contactos sin filtrar, conoces perfiles que
+            encajan con tu vivienda, han aportado documentación y buscan una
+            relación estable.
           </p>
-          <ul class="audience__list">
-            <li><span aria-hidden="true">&#10004;</span> Valoración real y transparente, sin promesas vacías.</li>
-            <li><span aria-hidden="true">&#10004;</span> Selección rigurosa de inquilinos o compradores.</li>
-            <li><span aria-hidden="true">&#10004;</span> Comunicación clara y constante: nada se pierde.</li>
-            <li><span aria-hidden="true">&#10004;</span> Coordinación legal, fiscal y de reformas.</li>
+          <ul class="owners__list">
+            <li>Ahorras tiempo y reduces visitas innecesarias</li>
+            <li>Accedes a un pool de inquilinos verificados por Abre Puertas</li>
+            <li>Colaboramos con inmobiliarias antes incluso de publicar el anuncio</li>
           </ul>
-          <a class="button button--primary" href="#contacto">
-            Quiero una valoración
-            <span aria-hidden="true">&rarr;</span>
+          <a class="button button--ghost button--on-dark" href="#contacto">
+            Hablar con nosotros
           </a>
         </div>
       </section>
 
-      <!-- 6. ENCONTRAR HOGAR -->
-      <section class="audience audience--seekers" id="hogar" aria-labelledby="seekers-title">
-        <div class="audience__content">
-          <p class="section-label">Encontrar hogar</p>
-          <h2 id="seekers-title">
-            ¿Buscas vivienda en Rivas? Te tratamos como nos gustaría que nos trataran.
-          </h2>
-          <p>
-            Sin presión, con respeto, con tiempo para entender qué necesitas. No
-            intentamos colocarte una casa: te ayudamos a encontrar la tuya.
-          </p>
-          <ul class="audience__list">
-            <li><span aria-hidden="true">&#9825;</span> Escucha real para entender tu situación.</li>
-            <li><span aria-hidden="true">&#9825;</span> Información clara sobre cada propiedad.</li>
-            <li><span aria-hidden="true">&#9825;</span> Acompañamiento si es tu primera compra.</li>
-            <li><span aria-hidden="true">&#9825;</span> Visitas ordenadas, sin agobios.</li>
-          </ul>
-          <a class="button button--primary" href="#contacto">
-            Cuéntanos qué buscas
-            <span aria-hidden="true">&rarr;</span>
-          </a>
-        </div>
-        <div class="audience__media audience__media--alt" aria-hidden="true">
-          <div class="audience__media-tag">Tu próximo hogar</div>
-          <div class="audience__media-stat">
-            <strong>Rivas</strong>
-            <span>Vaciamadrid y entorno cercano</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- 7. IMPACTO SOCIAL -->
-      <section class="impact" id="impacto" aria-labelledby="impact-title">
-        <div class="impact__inner">
-          <p class="section-label">Impacto social</p>
-          <h2 id="impact-title">
-            Una bolsa propia para que más personas puedan acceder a una vivienda digna.
-          </h2>
-          <p class="impact__lead">
-            Cada operación bien hecha puede generar también impacto. Por eso destinamos
-            el <strong>30% de nuestros beneficios operativos</strong> a una bolsa social
-            propia. No es marketing, es estructura: forma parte del modelo de negocio.
-          </p>
-
-          <div class="impact__grid">
-            <article>
-              <span class="impact__num">30%</span>
-              <h3>Compromiso fijo</h3>
-              <p>
-                Un porcentaje claro y medible del beneficio operativo se reserva para la
-                bolsa social.
-              </p>
-            </article>
-            <article>
-              <span class="impact__num" aria-hidden="true">&#9787;</span>
-              <h3>Para personas reales</h3>
-              <p>
-                Apoyamos casos concretos de personas con dificultades de acceso a una
-                vivienda digna en nuestra zona.
-              </p>
-            </article>
-            <article>
-              <span class="impact__num" aria-hidden="true">&#9650;</span>
-              <h3>Trazable y medible</h3>
-              <p>
-                Compartiremos cómo se alimenta la bolsa, en qué se usa y a cuántas
-                personas alcanzamos.
-              </p>
-            </article>
-          </div>
-
-          <p class="impact__footnote">
-            ¿Conoces un caso que deberíamos valorar? <a href="#contacto">Cuéntanoslo &rarr;</a>
-          </p>
-        </div>
-      </section>
-
-      <!-- 8. TESTIMONIOS / CONFIANZA -->
-      <section class="trust" aria-labelledby="trust-title">
-        <p class="section-label">Lo que cuentan</p>
-        <h2 id="trust-title">Confianza ganada conversación a conversación.</h2>
-        <div class="trust__grid">
-          <figure>
-            <blockquote>
-              <p>
-                Sentimos que nos escuchaban antes de venderse. Eso ya marcó la diferencia
-                desde la primera reunión.
-              </p>
-            </blockquote>
-            <figcaption>
-              <strong>Marta y Diego</strong>
-              <span>Compraron en Rivas Centro</span>
-            </figcaption>
-          </figure>
-          <figure>
-            <blockquote>
-              <p>
-                Vendieron mi piso en seis semanas con una presentación impecable.
-                Lo mejor: cero dolores de cabeza.
-              </p>
-            </blockquote>
-            <figcaption>
-              <strong>Carmen R.</strong>
-              <span>Vendedora · Rivas Urbanizaciones</span>
-            </figcaption>
-          </figure>
-          <figure>
-            <blockquote>
-              <p>
-                Me explicaron la inversión sin lenguaje técnico. Hoy tengo dos
-                viviendas trabajando para mí con su gestión.
-              </p>
-            </blockquote>
-            <figcaption>
-              <strong>Andrés P.</strong>
-              <span>Inversor</span>
-            </figcaption>
-          </figure>
-        </div>
-      </section>
-
-      <!-- 9. CONTACTO -->
+      <!-- CONTACTO -->
       <section class="contact" id="contacto" aria-labelledby="contact-title">
         <div class="contact__intro">
-          <p class="section-label">Hablamos</p>
+          <p class="section-label">Contacto</p>
           <h2 id="contact-title">
-            Cuéntanos qué puerta quieres abrir. <br />
-            Te respondemos en menos de 24 h.
+            Cuéntanos qué hogar buscas.
           </h2>
           <p>
-            Sin compromiso. Una primera conversación clara para entender qué necesitas y
-            ver cómo podemos ayudarte.
+            Una primera conversación para conocerte y ver cómo podemos ayudarte.
+            Te respondemos en menos de 24&nbsp;h.
           </p>
           <ul class="contact__channels">
             <li>
-              <span class="contact__icon" aria-hidden="true">&#9742;</span>
-              <div>
-                <strong>Teléfono</strong>
-                <a href="tel:+34900000000">+34 900 000 000</a>
-              </div>
-            </li>
-            <li>
-              <span class="contact__icon" aria-hidden="true">&#9993;</span>
+              <span class="contact__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6">
+                  <path d="M4 6.5h16v11H4z" />
+                  <path d="m4 7 8 6 8-6" />
+                </svg>
+              </span>
               <div>
                 <strong>Email</strong>
-                <a href="mailto:hola@abrepuertas.com">hola@abrepuertas.com</a>
+                <a href="mailto:luismi@abrepuertas.casa">luismi@abrepuertas.casa</a>
               </div>
             </li>
             <li>
-              <span class="contact__icon" aria-hidden="true">&#9873;</span>
+              <span class="contact__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6">
+                  <path d="M6.5 4.5h3l1.5 4-2 1.5a12 12 0 0 0 5.5 5.5l1.5-2 4 1.5v3a2 2 0 0 1-2.2 2A15.5 15.5 0 0 1 4.5 6.7 2 2 0 0 1 6.5 4.5Z" />
+                </svg>
+              </span>
               <div>
-                <strong>Zona de actuación</strong>
-                <span>Rivas Vaciamadrid y entorno</span>
-              </div>
-            </li>
-            <li>
-              <span class="contact__icon" aria-hidden="true">&#9788;</span>
-              <div>
-                <strong>Horario</strong>
-                <span>Lun&ndash;Vie 9:30&ndash;19:00 &middot; Sáb con cita</span>
+                <strong>Teléfono / WhatsApp</strong>
+                <a href="tel:+34682779349">682 779 349</a>
               </div>
             </li>
           </ul>
         </div>
 
         <form class="contact__form" novalidate aria-label="Formulario de contacto">
-          <fieldset class="contact__role" aria-label="¿Cómo podemos ayudarte?">
-            <legend>¿Cómo podemos ayudarte?</legend>
+          <fieldset class="contact__role" aria-label="¿Quién eres?">
+            <legend>¿Quién eres?</legend>
             <label>
-              <input type="radio" name="rol" value="propietario" checked />
-              <span>Soy propietario</span>
-            </label>
-            <label>
-              <input type="radio" name="rol" value="busco" />
+              <input type="radio" name="rol" value="inquilino" checked />
               <span>Busco hogar</span>
             </label>
             <label>
-              <input type="radio" name="rol" value="otra" />
-              <span>Otra consulta</span>
+              <input type="radio" name="rol" value="propietario" />
+              <span>Soy propietario</span>
+            </label>
+            <label>
+              <input type="radio" name="rol" value="inmobiliaria" />
+              <span>Inmobiliaria</span>
             </label>
           </fieldset>
+
           <label class="field">
             <span>Nombre</span>
             <input type="text" name="nombre" autocomplete="name" required />
           </label>
+
           <div class="field-row">
             <label class="field">
               <span>Email</span>
               <input type="email" name="email" autocomplete="email" required />
             </label>
             <label class="field">
-              <span>Teléfono <small>(opcional)</small></span>
-              <input type="tel" name="telefono" autocomplete="tel" />
+              <span>Teléfono</span>
+              <input type="tel" name="telefono" autocomplete="tel" required />
             </label>
           </div>
+
           <label class="field">
             <span>Cuéntanos brevemente</span>
-            <textarea name="mensaje" rows="4" placeholder="¿Qué te gustaría que valoremos contigo?" required></textarea>
+            <textarea
+              name="mensaje"
+              rows="4"
+              placeholder="Zona, presupuesto aproximado, fechas o lo que necesites compartir…"
+              required
+            ></textarea>
           </label>
+
           <label class="field field--check">
             <input type="checkbox" name="privacidad" required />
             <span>
               He leído y acepto la <a href="#">política de privacidad</a>.
             </span>
           </label>
+
           <button type="submit" class="button button--primary button--full">
-            <span class="button__label">Enviar mensaje</span>
-            <span aria-hidden="true">&rarr;</span>
+            Enviar mensaje
           </button>
           <p class="contact__feedback" role="status" aria-live="polite"></p>
           <p class="contact__legal">
@@ -555,58 +357,29 @@
     </main>
 
     <footer class="site-footer" aria-label="Pie de página">
-      <div class="site-footer__top">
+      <div class="site-footer__inner">
         <div class="site-footer__brand">
           <a class="brand brand--footer" href="#inicio" aria-label="Abre Puertas, ir al inicio">
-            <span class="brand__mark" aria-hidden="true">
-              <img
-                src="assets/abrepuertas-icon.png"
-                alt=""
-                width="44"
-                height="48"
-                decoding="async"
-                loading="lazy"
-              />
-            </span>
-            <span class="brand__text">
-              <strong>Abre</strong>Puertas
-            </span>
+            <img
+              class="brand__mark"
+              src="assets/abrepuertas-icon-light.png"
+              alt=""
+              width="36"
+              height="39"
+              decoding="async"
+              loading="lazy"
+            />
+            <span class="brand__text">Abre<span>Puertas</span></span>
           </a>
-          <p>
-            Inmobiliaria de acompañamiento en Rivas Vaciamadrid.
-            Confianza, criterio y propósito en cada operación.
-          </p>
+          <p>Abre puertas a una nueva forma de encontrar tu hogar.</p>
         </div>
 
-        <div class="site-footer__cols">
-          <div>
-            <h3>Navegar</h3>
-            <ul>
-              <li><a href="#nosotros">Quiénes somos</a></li>
-              <li><a href="#servicios">Servicios</a></li>
-              <li><a href="#propietarios">Propietarios</a></li>
-              <li><a href="#hogar">Encontrar hogar</a></li>
-              <li><a href="#impacto">Impacto social</a></li>
-            </ul>
-          </div>
-          <div>
-            <h3>Contacto</h3>
-            <ul>
-              <li><a href="tel:+34900000000">+34 900 000 000</a></li>
-              <li><a href="mailto:hola@abrepuertas.com">hola@abrepuertas.com</a></li>
-              <li>Rivas Vaciamadrid (Madrid)</li>
-            </ul>
-          </div>
-          <div>
-            <h3>Redes</h3>
-            <ul>
-              <li><a href="#" rel="noopener">Instagram</a></li>
-              <li><a href="#" rel="noopener">LinkedIn</a></li>
-              <li><a href="#" rel="noopener">WhatsApp</a></li>
-            </ul>
-          </div>
+        <div class="site-footer__contact">
+          <a href="mailto:luismi@abrepuertas.casa">luismi@abrepuertas.casa</a>
+          <a href="tel:+34682779349">682 779 349</a>
         </div>
       </div>
+
       <div class="site-footer__bottom">
         <small>&copy; <span id="year"></span> Abre Puertas. Todos los derechos reservados.</small>
         <nav aria-label="Enlaces legales">
@@ -619,7 +392,7 @@
 
     <a
       class="whatsapp-fab"
-      href="https://wa.me/34900000000?text=Hola%20Abre%20Puertas%2C%20me%20gustar%C3%ADa%20m%C3%A1s%20informaci%C3%B3n"
+      href="https://wa.me/34682779349?text=Hola%20Abre%20Puertas%2C%20me%20gustar%C3%ADa%20informaci%C3%B3n%20sobre%20la%20agencia%20personal%20de%20hogar"
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Escríbenos por WhatsApp"
@@ -630,7 +403,6 @@
           d="M16 3C9 3 3.5 8.5 3.5 15.5c0 2.4.6 4.7 1.8 6.7L3 29l7-1.8c1.9 1 4 1.6 6.1 1.6 7 0 12.5-5.5 12.5-12.5S23 3 16 3zm0 22.7c-1.9 0-3.7-.5-5.3-1.4l-.4-.2-4.1 1.1 1.1-4-.3-.4c-1-1.6-1.5-3.5-1.5-5.4 0-5.6 4.6-10.2 10.2-10.2 2.7 0 5.3 1.1 7.2 3 1.9 1.9 3 4.5 3 7.2 0 5.7-4.7 10.3-10.2 10.3zm5.6-7.7c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2s-.8 1-1 1.2c-.2.2-.4.3-.7.1-.3-.2-1.3-.5-2.5-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.7.1-.1.3-.4.4-.6.1-.2.2-.3.3-.5.1-.2 0-.4 0-.6 0-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9 0 1.7 1.2 3.4 1.4 3.6.2.3 2.4 3.6 5.7 4.9.8.3 1.4.5 1.9.7.8.3 1.5.2 2.1.1.6-.1 1.8-.7 2.1-1.5.3-.7.3-1.4.2-1.5-.1-.1-.3-.2-.6-.4z"
         />
       </svg>
-      <span class="whatsapp-fab__label">WhatsApp</span>
     </a>
 
     <script src="script.js"></script>
