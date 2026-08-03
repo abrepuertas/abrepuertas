@@ -158,6 +158,12 @@
     const FORMSPREE_ENDPOINT = "https://formspree.io/f/xykrrrzw";
     const fields = form.querySelectorAll("input, textarea");
 
+    form.querySelectorAll('a[href*="privacidad"]').forEach((link) => {
+      link.addEventListener("click", (event) => {
+        event.stopPropagation();
+      });
+    });
+
     fields.forEach((field) => {
       field.addEventListener("blur", () => validateField(field));
       field.addEventListener("input", () => {
