@@ -79,7 +79,7 @@
   }
 
   const revealTargets = document.querySelectorAll(
-    ".service, .impact__points li, .steps li, .split, .pricing__card, .diff__list li, .banner__inner, .contact__form"
+    ".model__grid article, .impact__points li, .service, .process li, .safe__main, .safe__aside, .tenants__badge, .tenant-value__why, .tenant-value__includes, .pricing__bar, .diff__list li, .banner__inner, .contact__form"
   );
   const reduceMotion = window.matchMedia(
     "(prefers-reduced-motion: reduce)"
@@ -155,7 +155,9 @@
   };
 
   if (form) {
+    const FORMSPREE_ENDPOINT = "https://formspree.io/f/xykrrrzw";
     const fields = form.querySelectorAll("input, textarea");
+
     fields.forEach((field) => {
       field.addEventListener("blur", () => validateField(field));
       field.addEventListener("input", () => {
@@ -169,7 +171,7 @@
       event.preventDefault();
       let firstInvalid = null;
       fields.forEach((field) => {
-        if (field.name === "_gotcha") return;
+        if (field.name === "_gotcha" || field.type === "hidden") return;
         if (!validateField(field) && !firstInvalid) firstInvalid = field;
       });
 
@@ -190,7 +192,7 @@
       }
 
       try {
-        const response = await fetch(form.action, {
+        const response = await fetch(FORMSPREE_ENDPOINT, {
           method: "POST",
           body: new FormData(form),
           headers: { Accept: "application/json" },
@@ -207,7 +209,7 @@
           const data = await response.json().catch(() => null);
           const message =
             data?.errors?.map((e) => e.message).join(" ") ||
-            "No se pudo enviar. Inténtalo de nuevo o escríbenos por WhatsApp.";
+            "No se pudo enviar. Inténtalo de nuevo o escribe a luismi@abrepuertas.casa.";
           if (feedback) {
             feedback.className = "contact__feedback is-error";
             feedback.textContent = message;
@@ -217,7 +219,7 @@
         if (feedback) {
           feedback.className = "contact__feedback is-error";
           feedback.textContent =
-            "No se pudo enviar. Revisa tu conexión o escríbenos por WhatsApp.";
+            "No se pudo enviar. Revisa tu conexión o escribe a luismi@abrepuertas.casa.";
         }
       } finally {
         if (submitBtn) submitBtn.removeAttribute("aria-disabled");
