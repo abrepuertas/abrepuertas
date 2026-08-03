@@ -79,7 +79,7 @@
   }
 
   const revealTargets = document.querySelectorAll(
-    ".process__list li, .value__reasons li, .value__includes, .pricing__card, .owners__inner, .contact__form"
+    ".service, .impact__points li, .steps li, .split, .pricing__card, .diff__list li, .banner__inner, .contact__form"
   );
   const reduceMotion = window.matchMedia(
     "(prefers-reduced-motion: reduce)"
@@ -165,10 +165,11 @@
       });
     });
 
-    form.addEventListener("submit", (event) => {
+    form.addEventListener("submit", async (event) => {
       event.preventDefault();
       let firstInvalid = null;
       fields.forEach((field) => {
+        if (field.name === "_gotcha") return;
         if (!validateField(field) && !firstInvalid) firstInvalid = field;
       });
 
@@ -183,38 +184,44 @@
 
       const submitBtn = form.querySelector("button[type='submit']");
       if (submitBtn) submitBtn.setAttribute("aria-disabled", "true");
-
-      const rol =
-        form.querySelector('input[name="rol"]:checked')?.value || "inquilino";
-      const nombre = form.querySelector('[name="nombre"]')?.value?.trim() || "";
-      const mensaje = form.querySelector('[name="mensaje"]')?.value?.trim() || "";
-      const rolLabel =
-        rol === "propietario"
-          ? "propietario"
-          : rol === "inmobiliaria"
-            ? "inmobiliaria"
-            : "persona que busca hogar";
-
-      const waText = encodeURIComponent(
-        `Hola Abre Puertas, soy ${nombre} (${rolLabel}). ${mensaje}`
-      );
-
       if (feedback) {
-        feedback.className = "contact__feedback is-success";
-        feedback.textContent =
-          "¡Gracias! Te abrimos WhatsApp para terminar el contacto.";
+        feedback.className = "contact__feedback";
+        feedback.textContent = "Enviando…";
       }
 
-      window.open(`https://wa.me/34682779349?text=${waText}`, "_blank");
-      form.reset();
+      try {
+        const response = await fetch(form.action, {
+          method: "POST",
+          body: new FormData(form),
+          headers: { Accept: "application/json" },
+        });
 
-      setTimeout(() => {
-        if (feedback) {
-          feedback.className = "contact__feedback";
-          feedback.textContent = "";
+        if (response.ok) {
+          form.reset();
+          if (feedback) {
+            feedback.className = "contact__feedback is-success";
+            feedback.textContent =
+              "¡Gracias! Hemos recibido tu mensaje y te responderemos pronto.";
+          }
+        } else {
+          const data = await response.json().catch(() => null);
+          const message =
+            data?.errors?.map((e) => e.message).join(" ") ||
+            "No se pudo enviar. Inténtalo de nuevo o escríbenos por WhatsApp.";
+          if (feedback) {
+            feedback.className = "contact__feedback is-error";
+            feedback.textContent = message;
+          }
         }
+      } catch {
+        if (feedback) {
+          feedback.className = "contact__feedback is-error";
+          feedback.textContent =
+            "No se pudo enviar. Revisa tu conexión o escríbenos por WhatsApp.";
+        }
+      } finally {
         if (submitBtn) submitBtn.removeAttribute("aria-disabled");
-      }, 6000);
+      }
     });
   }
 })();
