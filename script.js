@@ -5,10 +5,6 @@
   const header = document.querySelector(".site-header");
   const yearTarget = document.getElementById("year");
 
-  /* =========================
-     MENÚ MÓVIL
-     ========================= */
-
   const setMenu = (open) => {
     if (!menuButton || !siteNav) return;
     siteNav.classList.toggle("is-open", open);
@@ -22,14 +18,11 @@
 
   if (menuButton && siteNav) {
     menuButton.addEventListener("click", () => {
-      const willOpen = !siteNav.classList.contains("is-open");
-      setMenu(willOpen);
+      setMenu(!siteNav.classList.contains("is-open"));
     });
 
     siteNav.addEventListener("click", (event) => {
-      if (event.target instanceof HTMLAnchorElement) {
-        setMenu(false);
-      }
+      if (event.target instanceof HTMLAnchorElement) setMenu(false);
     });
 
     document.addEventListener("keydown", (event) => {
@@ -44,21 +37,13 @@
     navOverlay.addEventListener("click", () => setMenu(false));
   }
 
-  /* =========================
-     HEADER STICKY
-     ========================= */
-
   if (header) {
     const handleScroll = () => {
-      header.classList.toggle("is-scrolled", window.scrollY > 24);
+      header.classList.toggle("is-scrolled", window.scrollY > 40);
     };
     handleScroll();
     window.addEventListener("scroll", handleScroll, { passive: true });
   }
-
-  /* =========================
-     SCROLL-SPY DEL NAV
-     ========================= */
 
   const navLinks = Array.from(
     document.querySelectorAll('.site-nav a[href^="#"]')
@@ -73,47 +58,34 @@
     .filter(Boolean);
 
   if ("IntersectionObserver" in window && sections.length) {
-    const setActive = (id) => {
-      navLinks.forEach((link) => {
-        link.classList.toggle("is-active", link.getAttribute("href") === id);
-      });
-    };
     const spy = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActive(`#${entry.target.id}`);
+        entries.forEach((eventry) => {
+          if (eventry.isIntersecting) {
+            const id = `#${eventry.target.id}`;
+            navLinks.forEach((link) => {
+              link.classList.toggle("is-active", link.getAttribute("href") === id);
+            });
           }
         });
       },
-      { rootMargin: "-45% 0px -50% 0px", threshold: 0 }
+      { rootMargin: "-40% 0px -50% 0px", threshold: 0 }
     );
     sections.forEach(({ el }) => spy.observe(el));
   }
-
-  /* =========================
-     AÑO DEL FOOTER
-     ========================= */
 
   if (yearTarget) {
     yearTarget.textContent = String(new Date().getFullYear());
   }
 
-  /* =========================
-     REVEAL ON SCROLL
-     ========================= */
-
   const revealTargets = document.querySelectorAll(
-    ".about__pillars li, .service-card, .differential__list li, .impact__grid article, .trust figure, .audience__media, .hero__commitment, .properties__grid > *"
+    ".process__list li, .value__reasons li, .value__includes, .pricing__card, .owners__inner, .contact__form"
   );
   const reduceMotion = window.matchMedia(
     "(prefers-reduced-motion: reduce)"
   ).matches;
-  if (
-    !reduceMotion &&
-    "IntersectionObserver" in window &&
-    revealTargets.length
-  ) {
+
+  if (!reduceMotion && "IntersectionObserver" in window && revealTargets.length) {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -123,17 +95,13 @@
           }
         });
       },
-      { threshold: 0.16 }
+      { threshold: 0.14 }
     );
     revealTargets.forEach((el) => {
       el.classList.add("reveal");
       observer.observe(el);
     });
   }
-
-  /* =========================
-     FORMULARIO DE CONTACTO
-     ========================= */
 
   const form = document.querySelector(".contact__form");
   const feedback = form?.querySelector(".contact__feedback");
@@ -160,7 +128,10 @@
   };
 
   const validateField = (field) => {
-    if (!(field instanceof HTMLInputElement) && !(field instanceof HTMLTextAreaElement)) {
+    if (
+      !(field instanceof HTMLInputElement) &&
+      !(field instanceof HTMLTextAreaElement)
+    ) {
       return true;
     }
     if (field.type === "checkbox") {
@@ -188,8 +159,7 @@
     fields.forEach((field) => {
       field.addEventListener("blur", () => validateField(field));
       field.addEventListener("input", () => {
-        const wrapper = field.closest(".field");
-        if (wrapper && wrapper.classList.contains("has-error")) {
+        if (field.closest(".field")?.classList.contains("has-error")) {
           validateField(field);
         }
       });
@@ -199,8 +169,7 @@
       event.preventDefault();
       let firstInvalid = null;
       fields.forEach((field) => {
-        const isValid = validateField(field);
-        if (!isValid && !firstInvalid) firstInvalid = field;
+        if (!validateField(field) && !firstInvalid) firstInvalid = field;
       });
 
       if (firstInvalid) {
@@ -215,11 +184,28 @@
       const submitBtn = form.querySelector("button[type='submit']");
       if (submitBtn) submitBtn.setAttribute("aria-disabled", "true");
 
+      const rol =
+        form.querySelector('input[name="rol"]:checked')?.value || "inquilino";
+      const nombre = form.querySelector('[name="nombre"]')?.value?.trim() || "";
+      const mensaje = form.querySelector('[name="mensaje"]')?.value?.trim() || "";
+      const rolLabel =
+        rol === "propietario"
+          ? "propietario"
+          : rol === "inmobiliaria"
+            ? "inmobiliaria"
+            : "persona que busca hogar";
+
+      const waText = encodeURIComponent(
+        `Hola Abre Puertas, soy ${nombre} (${rolLabel}). ${mensaje}`
+      );
+
       if (feedback) {
         feedback.className = "contact__feedback is-success";
         feedback.textContent =
-          "¡Gracias! Hemos recibido tu mensaje y te responderemos en menos de 24 h.";
+          "¡Gracias! Te abrimos WhatsApp para terminar el contacto.";
       }
+
+      window.open(`https://wa.me/34682779349?text=${waText}`, "_blank");
       form.reset();
 
       setTimeout(() => {
@@ -228,7 +214,7 @@
           feedback.textContent = "";
         }
         if (submitBtn) submitBtn.removeAttribute("aria-disabled");
-      }, 7000);
+      }, 6000);
     });
   }
 })();
