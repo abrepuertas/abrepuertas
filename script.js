@@ -274,7 +274,7 @@
           const data = await response.json().catch(() => null);
           const message =
             data?.errors?.map((e) => e.message).join(" ") ||
-            "No se pudo enviar. Inténtalo de nuevo o escribe a luismi@abrepuertas.casa.";
+            "No se pudo enviar. Inténtalo de nuevo o escribe a hola@abrepuertas.casa.";
           if (feedback) {
             feedback.className = "contact__feedback is-error";
             feedback.textContent = message;
@@ -284,7 +284,7 @@
         if (feedback) {
           feedback.className = "contact__feedback is-error";
           feedback.textContent =
-            "No se pudo enviar. Revisa tu conexión o escribe a luismi@abrepuertas.casa.";
+            "No se pudo enviar. Revisa tu conexión o escribe a hola@abrepuertas.casa.";
         }
       } finally {
         if (submitBtn) submitBtn.removeAttribute("aria-disabled");
