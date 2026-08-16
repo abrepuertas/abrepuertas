@@ -75,7 +75,7 @@
   if (yearTarget) yearTarget.textContent = String(new Date().getFullYear());
 
   const revealTargets = document.querySelectorAll(
-    ".path-card, .impact__points li, .process li, .safe__main, .safe__aside, .tenants__badge, .tenant-value__why, .tenant-value__includes, .pricing__bar, .diff__list li, .trust figure, .banner__inner, .contact__panel"
+    ".path-card, .pillars__grid li, .owner-services article, .impact__points li, .process li, .safe__main, .safe__aside, .tenants__badge, .tenant-value__why, .tenant-value__includes, .founder__inner, .trust article, .faq__list details, .banner__inner, .contact__panel"
   );
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   if (!reduceMotion && "IntersectionObserver" in window && revealTargets.length) {

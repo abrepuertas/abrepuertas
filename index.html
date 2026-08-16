@@ -6,9 +6,9 @@
     <meta name="theme-color" content="#0a1f3d" />
     <meta
       name="description"
-      content="Abre Puertas, agencia de hogar en Rivas Vaciamadrid y entorno. Venta, alquiler, alquiler seguro y agencia personal para quien busca vivienda."
+      content="Abre Puertas, inmobiliaria con propósito en Rivas Vaciamadrid, Tarancón y corredor de la A-3. Venta, alquiler, selección de inquilinos y agencia personal para quien busca hogar."
     />
-    <title>Abre Puertas | Agencia de hogar</title>
+    <title>Abre Puertas | Inmobiliaria con propósito en Rivas Vaciamadrid</title>
     <link rel="icon" type="image/png" href="assets/abrepuertas-icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,7 +16,7 @@
       href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=20260803e" />
+    <link rel="stylesheet" href="styles.css?v=20260816a" />
     <script
       defer
       data-domain="abrepuertas.org"
@@ -38,7 +38,7 @@
             decoding="async"
             fetchpriority="high"
           />
-          <span class="brand__text">Abre<span>Puertas</span></span>
+          <span class="brand__text">Abre Puertas</span>
         </a>
 
         <button
@@ -54,10 +54,10 @@
         </button>
 
         <nav class="site-nav" id="site-nav" aria-label="Navegación principal">
-          <a href="#impacto">Impacto</a>
+          <a href="#agencia">Agencia de hogar</a>
           <a href="#propietarios">Propietarios</a>
           <a href="#inquilinos">Busco hogar</a>
-          <a href="#confianza">Confianza</a>
+          <a href="#impacto">Impacto</a>
           <a href="#contacto" class="site-nav__cta">Contactar</a>
         </nav>
       </div>
@@ -66,6 +66,7 @@
     <div class="nav-overlay" hidden></div>
 
     <main>
+      <!-- 1. PORTADA -->
       <section class="hero" id="inicio" aria-labelledby="hero-title">
         <div class="hero__media" aria-hidden="true">
           <img
@@ -81,181 +82,201 @@
 
         <div class="hero__content">
           <p class="hero__brand">Abre Puertas</p>
-          <p class="hero__tagline">Abrimos oportunidades. Creamos hogares.</p>
-          <p class="hero__zone">Rivas Vaciamadrid y entorno de Madrid</p>
+          <p class="hero__zone">
+            Agencia inmobiliaria con propósito en Rivas Vaciamadrid, Tarancón y corredor de la A-3
+          </p>
           <h1 id="hero-title">
-            No somos una inmobiliaria más.
-            <span>Somos una agencia de hogar.</span>
+            Vendemos y alquilamos viviendas con rigor.
+            <span>Ayudamos a personas a encontrar hogar.</span>
           </h1>
           <p class="hero__lead">
-            Ayudamos a propietarios a vender o alquilar con rigor, cercanía e
-            impacto social. Y a quien busca vivienda, a encontrar su hogar sin
-            sentirse solo.
+            Acompañamos a propietarios y a quienes buscan vivienda de principio
+            a fin, con procesos profesionales, trato humano y un modelo que
+            transforma parte de nuestro beneficio en oportunidades reales de
+            acceso a un hogar.
           </p>
           <div class="hero__actions">
             <a class="button button--primary" href="#contacto" data-rol="propietario">
-              Quiero valorar mi vivienda
+              Soy propietario: quiero valorar mi vivienda
             </a>
-            <a class="button button--ghost" href="#contacto" data-rol="inquilino">
-              Quiero mi agencia personal
+            <a class="button button--ghost" href="#inquilinos" data-rol="inquilino">
+              Busco hogar: conocer la agencia personal
             </a>
           </div>
-          <p class="hero__promise">Tu casa. Tu decisión. Nuestro compromiso.</p>
+          <p class="hero__promise">No somos una inmobiliaria más. Somos una agencia de hogar.</p>
+          <ul class="hero__strip" aria-label="Servicios">
+            <li>Venta</li>
+            <li>Alquiler</li>
+            <li>Selección de inquilinos</li>
+            <li>Gestión</li>
+            <li>Búsqueda personalizada</li>
+          </ul>
         </div>
       </section>
 
+      <!-- 2. DOS CAMINOS -->
       <section class="paths" aria-labelledby="paths-title">
         <div class="paths__inner">
-          <p class="section-label">Una forma distinta</p>
-          <h2 id="paths-title">
-            Las inmobiliarias tradicionales parten del inmueble.
-            <em>Nosotros también partimos de la persona.</em>
-          </h2>
-          <div class="paths__grid">
+          <p class="section-label">¿Cómo podemos ayudarte?</p>
+          <h2 id="paths-title">Dos caminos claros, un mismo compromiso.</h2>
+          <div class="paths__grid paths__grid--two">
             <a class="path-card" href="#propietarios">
-              <h3>Propietarios</h3>
-              <p>Venta, alquiler y alquiler seguro. Menos ruido, mejores perfiles.</p>
-              <span>Ver cómo trabajamos →</span>
+              <h3>Soy propietario</h3>
+              <p>
+                Quiero vender, alquilar o delegar la gestión de mi vivienda con
+                rigor y tranquilidad.
+              </p>
+              <span>Solicitar una valoración →</span>
             </a>
             <a class="path-card path-card--accent" href="#inquilinos">
               <h3>Busco hogar</h3>
-              <p>Agencia personal: te conocemos, preparamos tu perfil y buscamos por ti.</p>
-              <span>Ver el servicio →</span>
-            </a>
-            <a class="path-card" href="#impacto">
-              <h3>Impacto social</h3>
-              <p>El beneficio se transforma en becas y apoyo real al acceso a vivienda.</p>
-              <span>Conocer el fondo →</span>
+              <p>
+                Necesito ayuda profesional para encontrar vivienda y presentar
+                mejor mi candidatura.
+              </p>
+              <span>Comprobar si este servicio encaja →</span>
             </a>
           </div>
-          <ul class="services-strip" aria-label="Servicios">
-            <li>Compra-venta</li>
-            <li>Alquiler</li>
-            <li>Alquiler seguro</li>
-            <li>Agencia personal</li>
+        </div>
+      </section>
+
+      <!-- 3. QUÉ ES UNA AGENCIA DE HOGAR -->
+      <section class="pillars" id="agencia" aria-labelledby="pillars-title">
+        <div class="pillars__inner">
+          <p class="section-label">Qué es una agencia de hogar</p>
+          <h2 id="pillars-title">
+            El rigor de una buena inmobiliaria, con acompañamiento humano e impacto social real.
+          </h2>
+          <p class="pillars__lead">
+            Una agencia de hogar une el oficio inmobiliario con una forma más
+            humana de acompañar a las personas y un compromiso concreto con el
+            acceso a la vivienda.
+          </p>
+          <ul class="pillars__grid">
+            <li>
+              <strong>Rigor profesional</strong>
+              <span>
+                Valoraciones realistas, documentación ordenada, selección
+                rigurosa de candidatos y acompañamiento hasta la firma.
+              </span>
+            </li>
+            <li>
+              <strong>Acompañamiento humano</strong>
+              <span>
+                Escuchamos la situación de cada persona, explicamos cada
+                decisión y cuidamos la relación antes, durante y después de la
+                operación.
+              </span>
+            </li>
+            <li>
+              <strong>Impacto social</strong>
+              <span>
+                El 30&nbsp;% de nuestros beneficios operativos se destina a una
+                bolsa propia de ayudas para personas con dificultades de acceso
+                a una vivienda.
+              </span>
+            </li>
           </ul>
         </div>
       </section>
 
-      <section class="impact" id="impacto" aria-labelledby="impact-title">
-        <div class="impact__inner">
-          <div class="impact__copy">
-            <p class="section-label">Impacto social real</p>
-            <h2 id="impact-title">
-              Nuestro beneficio se transforma en oportunidades de acceso a la vivienda.
-            </h2>
-            <p>
-              Creamos un fondo económico para becar a familias con más
-              dificultades: ayuda con la fianza o una reducción del alquiler.
-              No es un gesto puntual: forma parte de cómo entendemos el oficio.
-            </p>
-          </div>
-          <ul class="impact__points">
-            <li>
-              <strong>Fondo propio</strong>
-              <span>Becas para quien necesita un empujón real al acceder a un hogar.</span>
-            </li>
-            <li>
-              <strong>Apoyo concreto</strong>
-              <span>Fianza o reducción de alquiler, valorado caso a caso.</span>
-            </li>
-            <li>
-              <strong>Propósito en cada operación</strong>
-              <span>Vender o alquilar también puede abrir puertas a otras personas.</span>
-            </li>
-          </ul>
-        </div>
-      </section>
-
+      <!-- 4. SERVICIOS PROPIETARIOS -->
       <section class="audience" id="propietarios" aria-labelledby="owners-title">
         <div class="audience__head">
           <p class="section-label">Para propietarios</p>
-          <h2 id="owners-title">Qué hacemos con tu vivienda.</h2>
+          <h2 id="owners-title">Servicios claros para tu vivienda.</h2>
           <p>
-            Te quitamos el ruido. Valoramos, preparamos, filtramos y te
-            acompañamos hasta la firma.
+            Presentamos menos candidatos, pero mejor analizados. Trabajamos con
+            criterio, transparencia y un interlocutor cercano.
           </p>
         </div>
 
-        <ol class="process">
-          <li>
-            <span class="process__num">01</span>
-            <h3>Valoramos</h3>
-            <p>Análisis realista para una estrategia que encaje contigo.</p>
-          </li>
-          <li>
-            <span class="process__num">02</span>
-            <h3>Preparamos y difundimos</h3>
-            <p>Presentación cuidada y difusión con criterio, no a volumen.</p>
-          </li>
-          <li>
-            <span class="process__num">03</span>
-            <h3>Filtramos</h3>
-            <p>Calidad de perfiles frente a cantidad de visitas.</p>
-          </li>
-          <li>
-            <span class="process__num">04</span>
-            <h3>Organizamos visitas</h3>
-            <p>Agenda ordenada, sin agobios ni improvisación.</p>
-          </li>
-          <li>
-            <span class="process__num">05</span>
-            <h3>Hasta la firma</h3>
-            <p>Cuidamos el proceso y las decisiones clave.</p>
-          </li>
-        </ol>
+        <div class="owner-services">
+          <article>
+            <h3>Venta de vivienda</h3>
+            <ul class="check-list">
+              <li>Valoración realista e informe de tasación propio</li>
+              <li>Estrategia de comercialización y difusión</li>
+              <li>Preparación y presentación de la vivienda</li>
+              <li>Filtrado y selección de compradores</li>
+              <li>Negociación y acompañamiento hasta notaría</li>
+            </ul>
+          </article>
+          <article>
+            <h3>Alquiler de vivienda</h3>
+            <ul class="check-list">
+              <li>Valoración de la renta</li>
+              <li>Preparación del anuncio</li>
+              <li>Filtrado telefónico previo</li>
+              <li>Análisis económico y documental</li>
+              <li>Visitas solo con perfiles adecuados</li>
+              <li>Contrato, inventario y entrega de llaves</li>
+            </ul>
+          </article>
+          <article>
+            <h3>Gestión integral del alquiler</h3>
+            <ul class="check-list">
+              <li>Interlocución con el inquilino</li>
+              <li>Seguimiento de cobros</li>
+              <li>Gestión de incidencias</li>
+              <li>Renovaciones y actualizaciones</li>
+              <li>Soporte administrativo</li>
+            </ul>
+          </article>
+        </div>
 
-        <div class="safe" id="alquiler-seguro">
+        <div class="safe" id="alquiler-tranquilidad">
           <div class="safe__main">
-            <p class="section-label">Alquiler seguro</p>
-            <h3>Tranquilidad con un proceso riguroso —sin promesas imposibles.</h3>
-            <div class="safe__cols">
-              <div>
-                <p class="safe__col-title">Qué incluye</p>
-                <ul class="check-list">
-                  <li>Candidatos analizados, documentados y acompañados</li>
-                  <li>Valoración económica y personal previa</li>
-                  <li>Documentación aportada antes de la visita</li>
-                  <li>Presentación honesta del encaje</li>
-                  <li>Menos visitas innecesarias</li>
-                </ul>
-              </div>
-              <div>
-                <p class="safe__col-title">Qué no es</p>
-                <ul class="check-list check-list--muted">
-                  <li>No es un seguro de impago ni un aval bancario</li>
-                  <li>No sustituye garantías legales o económicas</li>
-                  <li>No prometemos cero incidencias</li>
-                </ul>
-              </div>
-            </div>
-            <a class="button button--primary" href="#contacto" data-rol="propietario" data-interes="alquiler-seguro">
-              Quiero alquilar con tranquilidad
+            <p class="section-label">Selección rigurosa de inquilinos</p>
+            <h3>Alquiler con tranquilidad</h3>
+            <p>
+              Analizamos cada candidatura con rigor y te explicamos con
+              transparencia qué documentación aporta y qué garantías pueden ser
+              necesarias. El objetivo es presentar perfiles adecuados y reducir
+              visitas innecesarias.
+            </p>
+            <ul class="check-list">
+              <li>Valoración económica y personal previa</li>
+              <li>Documentación aportada antes de la visita</li>
+              <li>Presentación clara del encaje con la vivienda</li>
+              <li>Acompañamiento hasta la firma</li>
+            </ul>
+            <a
+              class="button button--primary"
+              href="#contacto"
+              data-rol="propietario"
+              data-interes="alquiler-tranquilidad"
+            >
+              Solicitar una valoración
             </a>
           </div>
           <aside class="safe__aside">
             <p class="safe__quote">
-              «Antes de buscar entre cientos de interesados, permítenos
-              presentarte al inquilino que puede encajar con tu vivienda.»
+              Si eres una inmobiliaria, también podemos colaborar: antes de
+              buscar entre cientos de interesados, podemos presentarte un perfil
+              ya trabajado.
             </p>
-            <p class="safe__note">También colaboramos con inmobiliarias.</p>
+            <a class="button button--ghost" href="#contacto" data-rol="inmobiliaria">
+              Quiero colaborar
+            </a>
           </aside>
         </div>
       </section>
 
+      <!-- 5. AGENCIA PERSONAL -->
       <section class="tenants" id="inquilinos" aria-labelledby="tenants-title">
         <div class="tenants__hero">
           <div class="tenants__copy">
             <p class="section-label">Para quien busca hogar</p>
-            <h2 id="tenants-title">Buscar piso no debería hacerte sentir tan solo.</h2>
+            <h2 id="tenants-title">Tu agencia personal de hogar.</h2>
             <p>
-              No eres un expediente. Primero te conocemos, preparamos tu
-              candidatura y buscamos activamente viviendas —también fuera de
-              portales— que realmente encajen contigo.
+              Primero te conocemos, preparamos tu candidatura y buscamos
+              activamente viviendas —también fuera de portales— que realmente
+              encajen contigo. Dejas de enfrentarte solo al mercado.
             </p>
           </div>
           <aside class="tenants__badge">
-            <p class="tenants__badge-kicker">Agencia personal de hogar</p>
+            <p class="tenants__badge-kicker">Agencia personal</p>
             <p>
               Te representamos ante propietarios e inmobiliarias y defendemos
               la calidad de tu candidatura.
@@ -298,145 +319,215 @@
 
         <div class="tenant-value">
           <div class="tenant-value__why">
-            <h3>¿Por qué Abre Puertas?</h3>
+            <h3>Lo que incluye</h3>
             <ul>
               <li>
-                <strong>Rigor profesional</strong>
-                <span>Verificamos y valoramos el encaje antes de presentar.</span>
+                <strong>Diagnóstico y estrategia</strong>
+                <span>Definimos una búsqueda viable y sostenible.</span>
               </li>
               <li>
-                <strong>Acompañamiento humano</strong>
-                <span>Dejas de enfrentarte solo: alguien te representa.</span>
+                <strong>Perfil Abre Puertas</strong>
+                <span>Candidatura clara, profesional y bien presentada.</span>
               </li>
               <li>
-                <strong>Más credibilidad</strong>
-                <span>Tu candidatura llega trabajada y documentada.</span>
+                <strong>Búsqueda proactiva</strong>
+                <span>Contactamos propietarios e inmobiliarias; no solo esperamos anuncios.</span>
               </li>
               <li>
-                <strong>Impacto social</strong>
-                <span>Abrimos oportunidades reales de acceso a un hogar digno.</span>
+                <strong>Acompañamiento</strong>
+                <span>Hasta la firma del contrato.</span>
               </li>
             </ul>
           </div>
           <aside class="tenant-value__includes">
-            <h3>Lo que incluye</h3>
-            <ul>
-              <li><strong>Diagnóstico y estrategia</strong> Búsqueda viable.</li>
-              <li><strong>Perfil Abre Puertas</strong> Candidatura profesional.</li>
-              <li><strong>Búsqueda proactiva</strong> No solo portales.</li>
-              <li><strong>Acompañamiento</strong> Hasta la firma.</li>
-            </ul>
+            <h3>Comprobar si encaja contigo</h3>
+            <p>
+              Cuéntanos tu zona, presupuesto y plazos. Te respondemos con
+              claridad sobre cómo podemos ayudarte.
+            </p>
+            <a class="button button--ghost" href="#contacto" data-rol="inquilino">
+              Quiero información del servicio
+            </a>
             <p class="tenant-value__motto">Abrimos oportunidades. Creamos hogares.</p>
           </aside>
         </div>
+      </section>
 
-        <div class="pricing" id="precio">
-          <div class="pricing__bar">
-            <div class="pricing__info">
-              <p class="pricing__label">Agencia personal de hogar</p>
-              <p class="pricing__desc">Búsqueda personalizada y acompañamiento integral</p>
-              <p class="pricing__price">390&nbsp;€ <span>+ IVA</span></p>
-            </div>
-            <ul class="pricing__perks">
-              <li>Pago único</li>
-              <li>Sin costes adicionales al firmar</li>
-              <li>Si no encontramos vivienda en 60 días, te devolvemos el dinero*</li>
-            </ul>
-            <a class="button button--primary" href="#contacto" data-rol="inquilino">
-              Quiero mi agencia personal
-            </a>
+      <!-- 6. IMPACTO SOCIAL -->
+      <section class="impact" id="impacto" aria-labelledby="impact-title">
+        <div class="impact__inner">
+          <div class="impact__copy">
+            <p class="section-label">Nuestro compromiso de impacto social</p>
+            <h2 id="impact-title">
+              El 30&nbsp;% de nuestros beneficios operativos va a una bolsa de ayudas Abre Puertas.
+            </h2>
+            <p>
+              Destinamos ese porcentaje a ayudas concretas para personas con
+              más dificultades de acceso a una vivienda: apoyo con la fianza,
+              reducción temporal de renta u otras fórmulas valoradas caso a caso.
+              Publicaremos la dotación, los criterios y los resultados cuando
+              estén disponibles.
+            </p>
           </div>
-          <p class="pricing__legal">* Según condiciones del servicio.</p>
+          <ul class="impact__points">
+            <li>
+              <strong>30&nbsp;% comprometido</strong>
+              <span>Porcentaje fijo del beneficio operativo destinado a la bolsa de ayudas.</span>
+            </li>
+            <li>
+              <strong>Ayudas concretas</strong>
+              <span>Fianza, reducción de alquiler u otras medidas de acceso real.</span>
+            </li>
+            <li>
+              <strong>Transparencia</strong>
+              <span>Comunicaremos cómo se alimenta la bolsa y a quién alcanza.</span>
+            </li>
+          </ul>
         </div>
       </section>
 
-      <section class="diff" id="diferencial" aria-labelledby="diff-title">
-        <div class="diff__intro">
-          <p class="section-label">Qué nos hace diferentes</p>
-          <h2 id="diff-title">Personas verificadas. Viviendas adecuadas. Relaciones de confianza.</h2>
+      <!-- 7. QUIÉN ESTÁ DETRÁS -->
+      <section class="founder" id="equipo" aria-labelledby="founder-title">
+        <div class="founder__inner">
+          <div class="founder__copy">
+            <p class="section-label">Quién está detrás</p>
+            <h2 id="founder-title">Luis Miguel Olivas, fundador de Abre Puertas.</h2>
+            <p>
+              Este proyecto nace de una convicción: el sector inmobiliario puede
+              ser profesional y rentable sin perder de vista a las personas.
+            </p>
+            <p>
+              En un mercado cada vez más competitivo, queremos acompañar a
+              propietarios y a quienes buscan hogar con cercanía, transparencia
+              y responsabilidad. Y que cada operación genere también un impacto
+              positivo: parte de nuestros resultados se transforma en apoyo para
+              quienes encuentran más dificultades al acceder a una vivienda.
+            </p>
+            <p class="founder__motto">
+              Abrir puertas, crear hogares y demostrar que profesionalidad,
+              rentabilidad y compromiso social pueden avanzar juntos.
+            </p>
+            <a class="button button--primary" href="#contacto">Hablar con nosotros</a>
+          </div>
+          <div class="founder__card" aria-hidden="true">
+            <img
+              src="assets/abrepuertas-icon.png"
+              alt=""
+              width="120"
+              height="130"
+              loading="lazy"
+              decoding="async"
+            />
+            <p>Abre Puertas</p>
+            <span>Rivas · Tarancón · A-3</span>
+          </div>
         </div>
-        <ul class="diff__list">
-          <li>
-            <span class="diff__letter" aria-hidden="true">A</span>
-            <strong>Agencia de hogar</strong>
-            <span>Escuchamos y adaptamos la estrategia a cada caso.</span>
-          </li>
-          <li>
-            <span class="diff__letter" aria-hidden="true">B</span>
-            <strong>Más filtrado</strong>
-            <span>Calidad frente a volumen: menos visitas improductivas.</span>
-          </li>
-          <li>
-            <span class="diff__letter" aria-hidden="true">C</span>
-            <strong>También para candidatos</strong>
-            <span>Partimos de la persona y buscamos activamente su hogar.</span>
-          </li>
-          <li>
-            <span class="diff__letter" aria-hidden="true">D</span>
-            <strong>Confianza</strong>
-            <span>Más información y credibilidad para la propiedad.</span>
-          </li>
-          <li>
-            <span class="diff__letter" aria-hidden="true">E</span>
-            <strong>Impacto real</strong>
-            <span>Becas y apoyo concreto al acceso a vivienda.</span>
-          </li>
-        </ul>
       </section>
 
+      <!-- 8. LO QUE PUEDES ESPERAR -->
       <section class="trust" id="confianza" aria-labelledby="trust-title">
         <div class="trust__inner">
           <p class="section-label">Confianza</p>
-          <h2 id="trust-title">Cómo se siente trabajar con Abre Puertas.</h2>
+          <h2 id="trust-title">Lo que puedes esperar de nosotros.</h2>
           <div class="trust__grid">
-            <figure>
-              <blockquote>
-                <p>Un interlocutor claro, sin ruido ni promesas vacías.</p>
-              </blockquote>
-              <figcaption>Acompañamiento humano</figcaption>
-            </figure>
-            <figure>
-              <blockquote>
-                <p>Perfiles trabajados y documentación lista antes de visitar.</p>
-              </blockquote>
-              <figcaption>Más credibilidad</figcaption>
-            </figure>
-            <figure>
-              <blockquote>
-                <p>Cada operación bien hecha también puede abrir puertas a otras personas.</p>
-              </blockquote>
-              <figcaption>Impacto con propósito</figcaption>
-            </figure>
+            <article>
+              <h3>Un interlocutor claro</h3>
+              <p>Te explicamos cada paso con transparencia y sin promesas vacías.</p>
+            </article>
+            <article>
+              <h3>Perfiles trabajados</h3>
+              <p>Documentación y valoración previas antes de organizar visitas.</p>
+            </article>
+            <article>
+              <h3>Propósito real</h3>
+              <p>Cada operación bien hecha también alimenta la bolsa de ayudas.</p>
+            </article>
           </div>
-          <!--
-          <p class="trust__note">
-            Estamos recopilando testimonios reales de quienes ya han abierto una
-            puerta con nosotros.
-            Si has trabajado con Abre Puertas, cuéntanos tu experiencia.
-          </p>
-          -->
         </div>
       </section>
 
-      <section class="banner" aria-label="Llamada a la acción">
+      <!-- 9. FAQ -->
+      <section class="faq" id="faq" aria-labelledby="faq-title">
+        <div class="faq__inner">
+          <p class="section-label">Preguntas frecuentes</p>
+          <h2 id="faq-title">Resolvemos dudas antes de escribirnos.</h2>
+          <div class="faq__list">
+            <details>
+              <summary>¿En qué zonas trabajáis?</summary>
+              <p>
+                En Rivas Vaciamadrid, Tarancón y el corredor de la A-3, además
+                del entorno cercano cuando el caso lo permite.
+              </p>
+            </details>
+            <details>
+              <summary>¿Cuánto cuesta vender o alquilar una vivienda?</summary>
+              <p>
+                Depende del servicio y de la operación. Cuéntanos tu caso y te
+                enviamos una propuesta clara, sin compromiso.
+              </p>
+            </details>
+            <details>
+              <summary>¿Cómo seleccionáis a los inquilinos?</summary>
+              <p>
+                Con filtrado previo, análisis económico y documental, y visitas
+                solo con perfiles que encajan con la vivienda y sus condiciones.
+              </p>
+            </details>
+            <details>
+              <summary>¿Qué es el alquiler con tranquilidad?</summary>
+              <p>
+                Es nuestro servicio de selección rigurosa de inquilinos:
+                documentación, valoración del encaje y acompañamiento. Es un
+                proceso profesional; no es un seguro de impago ni un aval.
+              </p>
+            </details>
+            <details>
+              <summary>¿Cómo funciona la agencia personal para buscar vivienda?</summary>
+              <p>
+                Te conocemos, preparamos tu perfil, buscamos activamente
+                oportunidades y presentamos tu candidatura a propietarios e
+                inmobiliarias, acompañándote hasta la firma.
+              </p>
+            </details>
+            <details>
+              <summary>¿Cómo funciona la bolsa de ayudas?</summary>
+              <p>
+                Destinamos el 30&nbsp;% de nuestros beneficios operativos a
+                ayudas concretas de acceso a vivienda. Publicaremos dotación,
+                criterios y resultados cuando estén disponibles.
+              </p>
+            </details>
+            <details>
+              <summary>¿Puedo colaborar si soy una inmobiliaria?</summary>
+              <p>
+                Sí. Podemos aportar demanda cualificada de nuestro pool de
+                candidatos verificados, también antes de publicar un anuncio.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- 10. BANNER -->
+      <section class="banner" aria-label="Cierre">
         <div class="banner__inner">
           <p>
-            Si conoces a alguien que quiera vender o alquilar su casa,
-            <strong>me encantará ayudarle.</strong>
-            Queremos que más personas puedan acceder a un hogar con dignidad.
+            Porque todo el mundo merece llegar a casa. Si conoces a alguien que
+            quiera vender o alquilar, <strong>me encantará ayudarle.</strong>
           </p>
           <p class="banner__thanks">¡Gracias por abrir puertas!</p>
           <a class="button button--on-orange" href="#contacto">Hablemos</a>
         </div>
       </section>
 
+      <!-- 11. CONTACTO -->
       <section class="contact" id="contacto" aria-labelledby="contact-title">
         <div class="contact__intro">
           <p class="section-label">Contacto</p>
           <h2 id="contact-title">Cuéntanos qué puerta quieres abrir.</h2>
           <p>
             Te respondemos en menos de 24&nbsp;h. Operamos en
-            <strong>Rivas Vaciamadrid y entorno de Madrid</strong>.
+            <strong>Rivas Vaciamadrid, Tarancón y corredor de la A-3</strong>.
           </p>
           <ul class="contact__channels">
             <li>
@@ -504,8 +595,12 @@
                   <span>Alquilar</span>
                 </label>
                 <label>
-                  <input type="radio" name="interes" value="alquiler-seguro" />
-                  <span>Alquiler seguro</span>
+                  <input type="radio" name="interes" value="alquiler-tranquilidad" />
+                  <span>Alquiler con tranquilidad</span>
+                </label>
+                <label>
+                  <input type="radio" name="interes" value="gestion" />
+                  <span>Gestión</span>
                 </label>
               </fieldset>
             </div>
@@ -514,7 +609,7 @@
               <div class="field-row">
                 <label class="field">
                   <span>Zona aproximada</span>
-                  <input type="text" name="zona" placeholder="Ej. Rivas, Vicálvaro…" />
+                  <input type="text" name="zona" placeholder="Ej. Rivas, Tarancón…" />
                 </label>
                 <label class="field">
                   <span>Presupuesto / mes</span>
@@ -608,9 +703,11 @@
               decoding="async"
               loading="lazy"
             />
-            <span class="brand__text">Abre<span>Puertas</span></span>
+            <span class="brand__text">Abre Puertas</span>
           </a>
-          <p>Abre puertas a una nueva forma de encontrar tu hogar.</p>
+          <p>
+            Agencia de hogar en Rivas Vaciamadrid, Tarancón y corredor de la A-3.
+          </p>
         </div>
         <div class="site-footer__contact">
           <a href="mailto:luismi@abrepuertas.casa">luismi@abrepuertas.casa</a>
@@ -643,6 +740,6 @@
       </svg>
     </a>
 
-    <script src="script.js?v=20260803e"></script>
+    <script src="script.js?v=20260816a"></script>
   </body>
 </html>
