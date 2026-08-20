@@ -16,7 +16,7 @@
       href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=20260816a" />
+    <link rel="stylesheet" href="styles.css?v=20260820a" />
     <script
       defer
       data-domain="abrepuertas.casa"
@@ -58,6 +58,8 @@
           <a href="#propietarios">Propietarios</a>
           <a href="#inquilinos">Busco hogar</a>
           <a href="#impacto">Impacto</a>
+          <a href="#equipo">Quiénes somos</a>
+          <a href="#faq">Preguntas frecuentes</a>
           <a href="#contacto" class="site-nav__cta">Contactar</a>
         </nav>
       </div>
@@ -70,10 +72,10 @@
       <section class="hero" id="inicio" aria-labelledby="hero-title">
         <div class="hero__media" aria-hidden="true">
           <img
-            src="assets/hero-hogar.jpg?v=piso"
+            src="assets/hero-hogar.jpg?v=calido"
             alt=""
-            width="1800"
-            height="1202"
+            width="2000"
+            height="1335"
             decoding="async"
             fetchpriority="high"
           />
@@ -195,7 +197,7 @@
           <article>
             <h3>Venta de vivienda</h3>
             <ul class="check-list">
-              <li>Valoración realista e informe de tasación propio</li>
+              <li>Valoración realista e informe profesional de valoración de mercado</li>
               <li>Estrategia de comercialización y difusión</li>
               <li>Preparación y presentación de la vivienda</li>
               <li>Filtrado y selección de compradores</li>
@@ -203,15 +205,19 @@
             </ul>
           </article>
           <article>
-            <h3>Alquiler de vivienda</h3>
+            <h3>Alquiler con tranquilidad</h3>
             <ul class="check-list">
-              <li>Valoración de la renta</li>
-              <li>Preparación del anuncio</li>
-              <li>Filtrado telefónico previo</li>
+              <li>Valoración realista de la renta</li>
+              <li>Preparación y publicación del anuncio</li>
+              <li>Prefiltrado telefónico de candidatos</li>
               <li>Análisis económico y documental</li>
-              <li>Visitas solo con perfiles adecuados</li>
+              <li>Selección y presentación de los mejores perfiles</li>
+              <li>Visitas solo con candidatos preseleccionados</li>
               <li>Contrato, inventario y entrega de llaves</li>
             </ul>
+            <p class="owner-services__tagline">
+              Menos visitas. Mejores candidatos. Más tranquilidad.
+            </p>
           </article>
           <article>
             <h3>Gestión integral del alquiler</h3>
@@ -225,42 +231,16 @@
           </article>
         </div>
 
-        <div class="safe" id="alquiler-tranquilidad">
-          <div class="safe__main">
-            <p class="section-label">Selección rigurosa de inquilinos</p>
-            <h3>Alquiler con tranquilidad</h3>
-            <p>
-              Analizamos cada candidatura con rigor y te explicamos con
-              transparencia qué documentación aporta y qué garantías pueden ser
-              necesarias. El objetivo es presentar perfiles adecuados y reducir
-              visitas innecesarias.
-            </p>
-            <ul class="check-list">
-              <li>Valoración económica y personal previa</li>
-              <li>Documentación aportada antes de la visita</li>
-              <li>Presentación clara del encaje con la vivienda</li>
-              <li>Acompañamiento hasta la firma</li>
-            </ul>
-            <a
-              class="button button--primary"
-              href="#contacto"
-              data-rol="propietario"
-              data-interes="alquiler-tranquilidad"
-            >
-              Solicitar una valoración
-            </a>
-          </div>
-          <aside class="safe__aside">
-            <p class="safe__quote">
-              Si eres una inmobiliaria, también podemos colaborar: antes de
-              buscar entre cientos de interesados, podemos presentarte un perfil
-              ya trabajado.
-            </p>
-            <a class="button button--ghost" href="#contacto" data-rol="inmobiliaria">
-              Quiero colaborar
-            </a>
-          </aside>
-        </div>
+        <aside class="collab-note" id="colaboracion">
+          <p>
+            Si eres una inmobiliaria, también podemos colaborar: antes de buscar
+            entre cientos de interesados, podemos presentarte un perfil ya
+            trabajado.
+          </p>
+          <a class="button button--primary" href="#contacto" data-rol="inmobiliaria">
+            Quiero colaborar
+          </a>
+        </aside>
       </section>
 
       <!-- 5. AGENCIA PERSONAL -->
@@ -340,13 +320,12 @@
             </ul>
           </div>
           <aside class="tenant-value__includes">
-            <h3>Comprobar si encaja contigo</h3>
+            <h3>Servicio completo hasta la firma</h3>
             <p>
-              Cuéntanos tu zona, presupuesto y plazos. Te respondemos con
-              claridad sobre cómo podemos ayudarte.
+              Y si no encontramos tu hogar en 60 días, te devolvemos el dinero.
             </p>
             <a class="button button--ghost" href="#contacto" data-rol="inquilino">
-              Quiero información del servicio
+              Quiero que Abre Puertas busque por mí
             </a>
             <p class="tenant-value__motto">Abrimos oportunidades. Creamos hogares.</p>
           </aside>
@@ -397,15 +376,23 @@
               ser profesional y rentable sin perder de vista a las personas.
             </p>
             <p>
-              En un mercado cada vez más competitivo, queremos acompañar a
-              propietarios y a quienes buscan hogar con cercanía, transparencia
-              y responsabilidad. Y que cada operación genere también un impacto
-              positivo: parte de nuestros resultados se transforma en apoyo para
-              quienes encuentran más dificultades al acceder a una vivienda.
+              En un mercado cada vez más competitivo y deshumanizado, en el que
+              muchas familias viven con preocupación la búsqueda de una vivienda,
+              queremos contribuir a hacer las cosas de otra manera. Acompañamos a
+              propietarios y a personas que buscan hogar con cercanía,
+              transparencia y responsabilidad, para que no tengan que afrontar el
+              proceso en soledad ni desde la incertidumbre.
+            </p>
+            <p>
+              Además, queremos que cada operación genere un impacto positivo. Por
+              eso, parte de nuestros resultados se transforma en apoyo económico
+              y credibilidad para personas que encuentran mayores dificultades
+              para acceder a una vivienda.
             </p>
             <p class="founder__motto">
-              Abrir puertas, crear hogares y demostrar que profesionalidad,
-              rentabilidad y compromiso social pueden avanzar juntos.
+              Nuestro propósito es claro: abrir puertas, crear hogares y
+              demostrar que profesionalidad, rentabilidad y compromiso social
+              pueden avanzar en la misma dirección.
             </p>
             <a class="button button--primary" href="#contacto">Hablar con nosotros</a>
           </div>
@@ -443,6 +430,18 @@
               <p>Cada operación bien hecha también alimenta la bolsa de ayudas.</p>
             </article>
           </div>
+
+          <div class="cases" id="casos">
+            <div class="cases__head">
+              <p class="section-label">Casos reales</p>
+              <h3>Historias de personas a las que hemos acompañado.</h3>
+              <p>
+                Pronto publicaremos aquí casos reales y testimonios con permiso
+                de las personas implicadas. Si ya has trabajado con nosotros y
+                quieres compartir tu experiencia, escríbenos.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -476,9 +475,11 @@
             <details>
               <summary>¿Qué es el alquiler con tranquilidad?</summary>
               <p>
-                Es nuestro servicio de selección rigurosa de inquilinos:
-                documentación, valoración del encaje y acompañamiento. Es un
-                proceso profesional; no es un seguro de impago ni un aval.
+                Es cómo gestionamos el alquiler de tu vivienda: valoración de la
+                renta, filtrado y selección rigurosa de candidatos, visitas solo
+                con perfiles preseleccionados y acompañamiento hasta la entrega
+                de llaves. Es un proceso profesional; no es un seguro de impago
+                ni un aval.
               </p>
             </details>
             <details>
@@ -595,14 +596,20 @@
                   <span>Alquilar</span>
                 </label>
                 <label>
-                  <input type="radio" name="interes" value="alquiler-tranquilidad" />
-                  <span>Alquiler con tranquilidad</span>
-                </label>
-                <label>
                   <input type="radio" name="interes" value="gestion" />
-                  <span>Gestión</span>
+                  <span>Gestión integral</span>
                 </label>
               </fieldset>
+              <label class="field">
+                <span>Municipio</span>
+                <input
+                  type="text"
+                  name="municipio"
+                  placeholder="Ej. Rivas Vaciamadrid, Tarancón…"
+                  data-required
+                  required
+                />
+              </label>
             </div>
 
             <div class="form-extra" data-for="inquilino" hidden>
@@ -642,7 +649,7 @@
             </div>
 
             <label class="field">
-              <span>Cuéntanos brevemente</span>
+              <span>Datos adicionales sobre la vivienda o tu situación</span>
               <textarea
                 id="mensaje"
                 name="mensaje"
@@ -740,6 +747,6 @@
       </svg>
     </a>
 
-    <script src="script.js?v=20260816a"></script>
+    <script src="script.js?v=20260820a"></script>
   </body>
 </html>

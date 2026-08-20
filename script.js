@@ -75,7 +75,7 @@
   if (yearTarget) yearTarget.textContent = String(new Date().getFullYear());
 
   const revealTargets = document.querySelectorAll(
-    ".path-card, .pillars__grid li, .owner-services article, .impact__points li, .process li, .safe__main, .safe__aside, .tenants__badge, .tenant-value__why, .tenant-value__includes, .founder__inner, .trust article, .faq__list details, .banner__inner, .contact__panel"
+    ".path-card, .pillars__grid li, .owner-services article, .collab-note, .impact__points li, .process li, .tenants__badge, .tenant-value__why, .tenant-value__includes, .founder__inner, .trust article, .cases, .faq__list details, .banner__inner, .contact__panel"
   );
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   if (!reduceMotion && "IntersectionObserver" in window && revealTargets.length) {
@@ -118,9 +118,11 @@
       const show = block.getAttribute("data-for") === rol;
       block.hidden = !show;
       block.querySelectorAll("input, textarea, select").forEach((input) => {
-        if (input.name === "interes") return;
-        if (!show) {
-          if (input.type !== "radio" && input.type !== "checkbox") input.value = "";
+        const needsRequired = show && input.hasAttribute("data-required");
+        input.toggleAttribute("required", needsRequired);
+        input.disabled = !show;
+        if (!show && input.type !== "radio" && input.type !== "checkbox") {
+          input.value = "";
         }
       });
     });
